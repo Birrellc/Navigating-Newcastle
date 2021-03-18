@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+
 if os.path.exists("env.py"):
     import env
 
@@ -17,12 +18,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
 # Create/Render Homepage
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template('index.html')
+
+
+@app.route("/dictionary")
+def dictionary():
+    dictionary = list(mongo.db.dictionary.find())
+    return render_template("dictionary.html", dictionary=dictionary)
 
 
 if __name__ =="__main__":

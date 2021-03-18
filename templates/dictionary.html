@@ -8,5 +8,12 @@
       Don't forget to add your own!.
     </p>
   </div>
-
+  <div class="div">
+    {% for words in dictionary %}
+        {{ words.word}}<br>
+        {{ words.definition }}<br>
+        {{ words.example }}<br>
+        {{ words.added_by}}<br>
+    {% endfor %}
+  </div>
 {% endblock %}
