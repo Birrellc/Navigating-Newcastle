@@ -25,6 +25,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route("/signup")
+def signup():
+    return render_template('signup.html')
+
+
 @app.route("/dictionary")
 def dictionary():
     dictionary = list(mongo.db.dictionary.find())
