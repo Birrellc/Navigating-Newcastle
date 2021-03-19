@@ -1,19 +1,22 @@
-{% extends "base.html" %} 
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="card-content white-text">
-    <span class="card-title">Geordie Dictionary</span>
-    <p>
-      Don't forget to add your own!.
-    </p>
-  </div>
-  <div class="div">
+  <span class="card-title">Geordie Dictionary</span>
+  <p>Don't forget to add your own!.</p>
+</div>
+<div class="container">
+  <ul class="collapsible">
     {% for words in dictionary %}
-        {{ words.word}}<br>
-        {{ words.definition }}<br>
-        {{ words.example }}<br>
-        {{ words.added_by}}<br>
+    <li>
+      <div class="collapsible-header">
+        <strong class="float-right">{{ words.word }}</strong>
+      </div>
+      <div class="collapsible-body">
+        <strong>{{ words.definition }}</strong>
+        <p>{{ words.example }}</p>
+      </div>
+    </li>
     {% endfor %}
-  </div>
+  </ul>
+</div>
 {% endblock %}
