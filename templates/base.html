@@ -32,11 +32,11 @@
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('dictionary') }}">Dictionary</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
           </ul>
         </div>
@@ -47,11 +47,11 @@
         <li>
           <h4 class="center-align">Navigating Newcastle</h4>
         </li>
-        <li><a href="#">Home</a></li>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('dictionary') }}">Dictionary</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Log In</a></li>
+        <li><a href="{{ url_for('profile') }}">Profile</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
         <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
       </ul>
     </header>
