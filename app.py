@@ -30,6 +30,11 @@ def signup():
     return render_template('signup.html')
 
 
+@app.route("/login")
+def login():
+    return render_template('login.html')
+
+
 @app.route("/dictionary")
 def dictionary():
     dictionary = list(mongo.db.dictionary.find())

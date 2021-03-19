@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<div class="container center-align">
+  <form class="card-panel">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="username" type="text" class="validate" />
+        <label for="username">Username</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" />
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <button type="submit" class="col s12 btn-large">Login!</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
