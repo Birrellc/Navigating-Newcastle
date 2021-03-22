@@ -3,7 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField, PasswordField, SubmitField
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -23,9 +23,10 @@ mongo = PyMongo(app)
 # Forms
 
 class LoginForm(FlaskForm):
+    username = StringField('Email')
     email = StringField('Email')
     password = StringField('Password')
-
+    submit = SubmitField(label="Log In")
 
 # Routes
 
