@@ -40,7 +40,7 @@ def home():
 @app.route("/signup")
 def signup():
     signup_form = LoginForm()
-    return render_template('signup.html')
+    return render_template('signup.html', form=signup_form)
 
 
 @app.route("/login")
