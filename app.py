@@ -20,7 +20,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
-user = mongo.db.user
+users = mongo.db.user
 
 
 # Forms
@@ -28,7 +28,7 @@ user = mongo.db.user
 # Code used for this class below is credited to https://pythonprogramming.net/flask-user-registration-form-tutorial/
 
 
-# class
+# user login / signup class
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
@@ -50,8 +50,8 @@ class User(UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    users = user.find_one({'_id': ObjectId(user_id)})
-    return User(users)
+    user = users.find_one({'_id': ObjectId(user_id)})
+    return User(user)
 
 
 # Routes
@@ -65,29 +65,37 @@ def home():
     return render_template('index.html')
 
 
-@ app.route("/login", methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
-        if form.email.data == 'test@test.com' and form.password.data == 'password':
-            flash('You are logged in!')
-            return redirect(url_for('home'))
+        print('password')
+        user = users.find_one({'email': form.email.data})
+        if user and check_password_hash(
+                        user['password'],
+                        form.password.data.encode()):
+            username = user['username']
+            flash(f'You have logged in successfully {username}.')
+            return redirect(url_for(
+                            "profile"))
         else:
-            flash('login unsucessful, please check credentials!')
+            flash(
+                'Login unsucessful')
+
     return render_template('login.html', title="Login", form=form)
 
 
-@app.route('/signup', methods=['GET', 'POST'])
+@ app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hash_password = generate_password_hash(
-            request.form.get('password'),
-            method='pbkdf2:sha256',
-            salt_length=8)
-        user.insert_one({
+            request.form.get('password'))
+        users.insert_one({
             "username": form.username.data,
             "email": form.email.data,
             "password": hash_password,
