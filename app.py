@@ -23,11 +23,6 @@ mongo = PyMongo(app)
 users = mongo.db.user
 
 
-# Forms
-
-# Code used for this class below is credited to https://pythonprogramming.net/flask-user-registration-form-tutorial/
-
-
 # user login / signup class
 
 login_manager = LoginManager(app)
@@ -40,7 +35,6 @@ class User(UserMixin):
         self.user = user
         self.username = user['username']
         self.id = user['_id']
-        self.email = user['email']
         self.password = user['password']
 
     def get_id(self):
@@ -72,7 +66,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         print('password')
-        user = users.find_one({'email': form.email.data})
+        user = users.find_one({'username': form.username.data})
         if user and check_password_hash(
                         user['password'],
                         form.password.data.encode()):
@@ -97,7 +91,6 @@ def signup():
             request.form.get('password'))
         users.insert_one({
             "username": form.username.data,
-            "email": form.email.data,
             "password": hash_password,
         })
     return render_template(
@@ -112,7 +105,8 @@ def dictionary():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
-@ app.route("/profile")
+@app.route("/profile", methods=["GET", "POST"])
+@login_required
 def profile():
     return render_template('profile.html')
 
