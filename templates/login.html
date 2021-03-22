@@ -1,7 +1,24 @@
 {% extends "base.html" %} {% block content %}
 <div class="container center-align">
- 
- 
+  <form class="card-panel" method="POST" action="{{ url_for('login') }}">
+    {{ form.hidden_tag() }}
+    <div class="row">
+      <div class="form-group col s12">
+        {{ form.email.label }} {{ form.email }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col s12">
+        {{ form.password.label }} {{ form.password }}
+      </div>
+    </div>
+    <div class="row">{{ form.submit }}</div>
+  </form>
+  <div>
+    <p>
+      Dont have an account? <a href="{{ url_for('signup') }}"> Sign In</a>
+    </p>
+  </div>
 </div>
 
 {% endblock %}
