@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 # Forms
 
 class LoginForm(FlaskForm):
-    username = StringField('Email')
+    username = StringField('Username')
     email = StringField('Email')
     password = StringField('Password')
     submit = SubmitField(label="Log In")
