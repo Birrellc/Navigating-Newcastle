@@ -20,10 +20,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
-users = mongo.db.user
-
-login_manager = LoginManager()
-login_manager.init_app(app)
+user = mongo.db.user
 
 
 # Forms
@@ -32,6 +29,11 @@ login_manager.init_app(app)
 
 
 # class
+
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+login_manager.init_app(app)
+
 
 class User(UserMixin):
     def __init__(self, user):
@@ -48,8 +50,8 @@ class User(UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    user = users.find_one({'_id': ObjectId(user_id)})
-    return User(user)
+    users = user.find_one({'_id': ObjectId(user_id)})
+    return User(users)
 
 
 # Routes
@@ -63,15 +65,6 @@ def home():
     return render_template('index.html')
 
 
-@app.route("/signup", methods=["GET", "POST"])
-def signup():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!')
-        return redirect(url_for('home'))
-    return render_template("signup.html", title="Signup", form=form)
-
-
 @ app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -82,6 +75,27 @@ def login():
         else:
             flash('login unsucessful, please check credentials!')
     return render_template('login.html', title="Login", form=form)
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        hash_password = generate_password_hash(
+            request.form.get('password'),
+            method='pbkdf2:sha256',
+            salt_length=8)
+        user.insert_one({
+            "username": form.username.data,
+            "email": form.email.data,
+            "password": hash_password,
+        })
+    return render_template(
+        'signup.html',
+        title="Registration",
+        form=form)
 
 
 @ app.route("/dictionary")
