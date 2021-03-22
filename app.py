@@ -8,8 +8,7 @@ from flask import (
 from forms import RegistrationForm, LoginForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
-from flask_login import UserMixin, login_user,
-LoginManager, login_required, current_user, logout_user
+from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
 if os.path.exists("env.py"):
     import env
@@ -67,6 +66,9 @@ def home():
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!')
+        return redirect(url_for('home'))
     return render_template("signup.html", title="Signup", form=form)
 
 
