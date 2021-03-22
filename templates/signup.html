@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <div class="container center-align">
-  <form class="card-panel">
+  <form class="card-panel" method="POST" action="{{ url_for('signup') }}">
     
     <div class="row">
       <div class="form-group col s12">
