@@ -26,7 +26,7 @@ class LoginForm(FlaskForm):
     username = StringField('Username')
     email = StringField('Email')
     password = StringField('Password')
-    submit = SubmitField(label="Log In")
+    submit = SubmitField(label="Sign Up")
 
 # Routes
 
