@@ -2,6 +2,8 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
+from flask_wtf import FlaskForm
+from wtforms import StringField
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -18,7 +20,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Create/Render Homepage
+# Forms
+
+class LoginForm(FlaskForm):
+    email = StringField('Email')
+    password = StringField('Password')
+
+
+# Routes
+
+# Render Homepage
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -27,6 +39,7 @@ def home():
 
 @app.route("/signup")
 def signup():
+    signup_form = LoginForm()
     return render_template('signup.html')
 
 
