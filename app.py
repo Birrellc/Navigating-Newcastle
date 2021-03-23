@@ -8,7 +8,6 @@ from flask import (
 from forms import RegistrationForm, LoginForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
-from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
 if os.path.exists("env.py"):
     import env
@@ -21,31 +20,6 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 users = mongo.db.user
-
-
-# user login / signup class
-
-login_manager = LoginManager(app)
-login_manager.login_view = 'login'
-login_manager.init_app(app)
-
-
-class User(UserMixin):
-    def __init__(self, user):
-        self.user = user
-        self.username = user['username']
-        self.id = user['_id']
-        self.password = user['password']
-
-    def get_id(self):
-        object_id = self.user['_id']
-        return str(object_id)
-
-
-@login_manager.user_loader
-def load_user(user_id):
-    user = users.find_one({'_id': ObjectId(user_id)})
-    return User(user)
 
 
 # Routes
@@ -61,52 +35,21 @@ def home():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('home'))
-    form = LoginForm()
-    if form.validate_on_submit():
-        print('password')
-        user = users.find_one({'username': form.username.data})
-        if user and check_password_hash(
-                        user['password'],
-                        form.password.data.encode()):
-            username = user['username']
-            flash(f'You have logged in successfully {username}.')
-            return redirect(url_for(
-                            "profile"))
-        else:
-            flash(
-                'Login unsucessful')
-
-    return render_template('login.html', title="Login", form=form)
+    return render_template('login.html')
 
 
-@ app.route('/signup', methods=['GET', 'POST'])
+@app.route('/signup')
 def signup():
-    if current_user.is_authenticated:
-        return redirect(url_for('home'))
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        hash_password = generate_password_hash(
-            request.form.get('password'))
-        users.insert_one({
-            "username": form.username.data,
-            "password": hash_password,
-        })
-    return render_template(
-        'signup.html',
-        title="Registration",
-        form=form)
+    return render_template('signup.html')
 
 
-@ app.route("/dictionary")
+@app.route("/dictionary")
 def dictionary():
     dictionary = list(mongo.db.dictionary.find())
     return render_template("dictionary.html", dictionary=dictionary)
 
 
 @app.route("/profile", methods=["GET", "POST"])
-@login_required
 def profile():
     return render_template('profile.html')
 
