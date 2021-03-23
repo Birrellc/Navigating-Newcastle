@@ -40,8 +40,9 @@ def login():
         existing_user = users.find_one(
             {"username": form.username.data})
         if existing_user:
-            if existing_user and check_password_hash(existing_user['password'],
-                                                     form.password.data.encode()):
+            if existing_user and check_password_hash(
+                    existing_user['password'],
+                    form.password.data.encode()):
                 flash("You have Logged in!")
                 username = form.username.data
                 session["user"] = username
