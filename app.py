@@ -5,7 +5,7 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from forms import RegistrationForm, LoginForm
+from forms import RegistrationForm, LoginForm, DictionaryForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
 

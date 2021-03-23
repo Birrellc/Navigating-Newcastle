@@ -17,3 +17,14 @@ class LoginForm(FlaskForm):
                         validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
+
+
+class DictionaryForm(FlaskForm):
+    word = StringField('Word',
+                       validators=[DataRequired()])
+    definition = StringField('Definition',
+                             validators=[DataRequired()])
+    example = StringField('Example',
+                          validators=[DataRequired()])
+    submit = SubmitField('Add Word')
+
