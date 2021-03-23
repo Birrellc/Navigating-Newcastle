@@ -33,9 +33,22 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template('login.html')
+    form = LoginForm()
+    if request.method == "POST":
+        existing_user = users.find_one(
+            {"username": form.username.data})
+        if existing_user:
+            if existing_user and check_password_hash(existing_user['password'],
+                                                     form.password.data.encode()):
+                flash("You have Logged in!")
+                session["user"] = form.username.data
+                return redirect(url_for("home"))
+
+        else:
+            flash('incorrect login')
+    return render_template("login.html", form=form)
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -49,7 +62,7 @@ def signup():
             return redirect(url_for("login"))
 
         hash_password = generate_password_hash(
-            form.password.data.encode())
+            form.password.data)
 
         register = {
             "username": form.username.data,
