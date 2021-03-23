@@ -99,6 +99,30 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/add_word", methods=["GET", "POST"])
+def add_word():
+    form = DictionaryForm()
+    if form.validate_on_submit():
+        existing_word = mongo.db.dictionary.find_one(
+            {"word": form.word.data})
+
+        if existing_word:
+            flash(
+                "your word already exists in our dictionary, sorry!")
+            return redirect(url_for("add_word"))
+        words = {
+            "word": form.word.data,
+            "definition": form.definition.data,
+            "example": form.example.data,
+            "added_by": session["user"]
+        }
+        mongo.db.dictionary.insert_one(words)
+        flash("Your word is now in the dictionary")
+        return redirect(url_for("dictionary"))
+
+    return render_template("add_word.html", form=form)
+
+
 @app.route("/logout")
 def logout():
     flash("logged out")
