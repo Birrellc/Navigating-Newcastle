@@ -22,9 +22,7 @@ class LoginForm(FlaskForm):
 class DictionaryForm(FlaskForm):
     word = StringField('Word',
                        validators=[DataRequired()])
-    definition = StringField('Definition',
-                             validators=[DataRequired()])
+    definition = StringField('Definition')
     example = StringField('Example',
                           validators=[DataRequired()])
     submit = SubmitField('Add Word')
-
