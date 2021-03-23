@@ -43,8 +43,9 @@ def login():
             if existing_user and check_password_hash(existing_user['password'],
                                                      form.password.data.encode()):
                 flash("You have Logged in!")
-                session["user"] = form.username.data
-                return redirect(url_for("home"))
+                username = form.username.data
+                session["user"] = username
+                return redirect(url_for("profile", username=session["user"]))
 
         else:
             flash('incorrect login')
@@ -69,7 +70,8 @@ def signup():
             "password": hash_password,
         }
         users.insert_one(register)
-        session["user"] = form.username.data
+        username = form.username.data
+        session["user"] = username
 
         flash(" Account registered!")
         return redirect(url_for("profile", username=session["user"]))
@@ -83,9 +85,17 @@ def dictionary():
     return render_template("dictionary.html", dictionary=dictionary)
 
 
-@app.route("/profile", methods=["GET", "POST"])
-def profile():
-    return render_template('profile.html')
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = users.find_one(
+        {"username": session["user"]})['username']
+
+    if session["user"]:
+        return render_template(
+            "profile.html",
+            username=username)
+
+    return redirect(url_for("login"))
 
 
 @ app.route("/contact")
