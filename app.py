@@ -99,6 +99,13 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/logout")
+def logout():
+    flash("logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @ app.route("/contact")
 def contact():
     return render_template('contact.html')
