@@ -38,9 +38,30 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html')
+    form = RegistrationForm()
+    if request.method == "POST":
+        existing_user = users.find_one(
+            {"username": form.username.data})
+        if existing_user:
+            flash("That user name already exists")
+            return redirect(url_for("login"))
+
+        hash_password = generate_password_hash(
+            form.password.data.encode())
+
+        register = {
+            "username": form.username.data,
+            "password": hash_password,
+        }
+        users.insert_one(register)
+        session["user"] = form.username.data
+
+        flash(" Account registered!")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("signup.html", form=form)
 
 
 @app.route("/dictionary")
