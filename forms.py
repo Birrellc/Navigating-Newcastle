@@ -32,7 +32,4 @@ class UpdateWordForm(FlaskForm):
     word = StringField('Word', validators=[DataRequired()])
     definition = StringField('Definition', validators=[DataRequired()])
     example = StringField('Example', validators=[DataRequired()])
-    submit = StringField('Update Word')
-
-
-
+    submit = SubmitField('Update Word')
