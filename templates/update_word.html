@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="container center-align">
+  <form class="card-panel" method="POST" action="{{ url_for('update_word') }}">
+    {{ form.hidden_tag() }}
+    <div class="row">
+      <div class="form-group col s12">
+        {{ form.word.label }} {{ form.word }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col s12">
+        {{ form.definition.label }} {{ form.definition }}
+      </div>
+    </div>
+    <div class="row">
+        <div class="form-group col s12">
+          {{ form.example.label }} {{ form.example }}
+        </div>
+      </div>
+    <div class="row">{{ form.submit }}</div>
+  </form>
+  <div>
+  </div>
+</div>
+
+{% endblock %}
