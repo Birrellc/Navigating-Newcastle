@@ -1,7 +1,7 @@
+import os
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
-import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -122,6 +122,24 @@ def add_word():
         return redirect(url_for("dictionary"))
 
     return render_template("add_word.html", form=form)
+
+
+@app.route("/update_word/<word_id>", methods=["GET", "POST"])
+def update_word(word_id):
+    form = UpdateWordForm()
+    word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
+    dictionaries = mongo.db.dictionary.find().sort("word", 1)
+    if form.validate_on_submit():
+        update = {
+            "word": form.word.data,
+            "definition": form.definition.data,
+            "example": form.example.data,
+            "added_by": session["user"]
+        }
+        mongo.db.dictionary.update({"_id": ObjectId(word_id)}, update)
+        flash("Your word is now in the dictionary")
+    return render_template("update_word.html", form=form, word=word,
+                           dictionaries=dictionaries)
 
 
 @app.route("/logout")
