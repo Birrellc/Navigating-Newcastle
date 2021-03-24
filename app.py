@@ -142,6 +142,12 @@ def update_word(word_id):
                            dictionaries=dictionaries)
 
 
+@app.route("/delete_word/<word_id>")
+def delete_word(word_id):
+    mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
+    return redirect(url_for("dictionary"))
+
+
 @app.route("/logout")
 def logout():
     flash("logged out")
