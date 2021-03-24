@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <div class="container center-align">
-  <form class="card-panel" method="POST" action="{{ url_for('update_word') }}">
+  <form class="card-panel" method="POST" action="{{ url_for('update_word', word_id=word._id) }}">
     {{ form.hidden_tag() }}
     <div class="row">
       <div class="form-group col s12">
