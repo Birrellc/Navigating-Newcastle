@@ -19,20 +19,25 @@
 </div>
 <div class="container">
   <ul class="collapsible">
-    {% for words in dictionary %}
-    {% if session.user == words.added_by %}
+    {% for word in dictionary %} {% if session.user == word.added_by %}
+    <div class="div">
+      <a
+        href="{{ url_for('update_word', word_id=word._id) }}"
+        class="btn-small light-blue lighten-1"
+        >Update</a
+      >
+    </div>
     <li>
       <div class="collapsible-header">
-        <strong class="float-right">{{ words.word }}</strong>
+        <strong class="float-right">{{ word.word }}</strong>
       </div>
       <div class="collapsible-body">
-        <strong>{{ words.definition }}</strong>
-        <p>{{ words.example }}</p>
-        <p>{{ words.added_by }}</p>
+        <strong>{{ word.definition }}</strong>
+        <p>{{ word.example }}</p>
+        <p>{{ word.added_by }}</p>
       </div>
     </li>
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
   </ul>
 </div>
 {% endblock %}
