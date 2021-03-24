@@ -90,11 +90,12 @@ def dictionary():
 def profile(username):
     username = users.find_one(
         {"username": session["user"]})['username']
+    dictionary = list(mongo.db.dictionary.find())
 
     if session["user"]:
         return render_template(
             "profile.html",
-            username=username)
+            dictionary=dictionary, username=username)
 
     return redirect(url_for("login"))
 
