@@ -26,3 +26,13 @@ class DictionaryForm(FlaskForm):
     example = StringField('Example',
                           validators=[DataRequired()])
     submit = SubmitField('Add Word')
+
+
+class UpdateWordForm(FlaskForm):
+    word = StringField('Word', validators=[DataRequired()])
+    definition = StringField('Definition', validators=[DataRequired()])
+    example = StringField('Example', validators=[DataRequired()])
+    submit = StringField('Update Word')
+
+
+
