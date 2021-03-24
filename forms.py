@@ -14,7 +14,7 @@ class RegistrationForm(FlaskForm):
 
 class LoginForm(FlaskForm):
     username = StringField('Username',
-                        validators=[DataRequired(), Email()])
+                           validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
 
@@ -22,7 +22,7 @@ class LoginForm(FlaskForm):
 class DictionaryForm(FlaskForm):
     word = StringField('Word',
                        validators=[DataRequired()])
-    definition = StringField('Definition')
+    definition = StringField('Definition', validators=[DataRequired()])
     example = StringField('Example',
                           validators=[DataRequired()])
     submit = SubmitField('Add Word')
