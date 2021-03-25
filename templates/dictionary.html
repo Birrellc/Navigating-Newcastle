@@ -5,6 +5,17 @@
   <p>Don't forget to add your own!.</p>
 </div>
 <div class="container">
+  <div class="container center-align">
+    <form class="card-panel" action="{{ url_for('search') }}" method="POST">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        <div class="form-group col s12">
+          {{ form.word.label }} {{ form.word }}
+        </div>
+      </div>
+      <div class="row">{{ form.submit }}</div>
+    </form>
+  </div>
   <ul class="collapsible">
     {% for word in dictionary %}
     <li>

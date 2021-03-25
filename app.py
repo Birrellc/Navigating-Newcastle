@@ -5,9 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from forms import RegistrationForm, LoginForm, DictionaryForm, UpdateWordForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Length, Email
+from forms import RegistrationForm, LoginForm, DictionaryForm, UpdateWordForm, SearchForm
 
 if os.path.exists("env.py"):
     import env
@@ -82,8 +80,9 @@ def signup():
 
 @app.route("/dictionary")
 def dictionary():
+    form = SearchForm()
     dictionary = list(mongo.db.dictionary.find())
-    return render_template("dictionary.html", dictionary=dictionary)
+    return render_template("dictionary.html", dictionary=dictionary, form=form)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -160,15 +159,16 @@ def contact():
     return render_template('contact.html')
 
 
-@ app.route("/search")
+@ app.route("/search", methods=["GET", "POST"])
 def search():
-    query = form.word.data
-    words = list(mongo.db.tasks.find({"$text": {"$search": query}}))
-    return render_template("tasks.html", words=words)
+    form = SearchForm()
+    if request.method == "POST":
+        query = form.word.data
+        words = list(mongo.db.dictionary.find({"$text": {"$search": query}}))
+        return render_template("dictionary.html", words=words, form=form, query=query)
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-
