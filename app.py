@@ -160,7 +160,15 @@ def contact():
     return render_template('contact.html')
 
 
+@ app.route("/search")
+def search():
+    query = form.word.data
+    words = list(mongo.db.tasks.find({"$text": {"$search": query}}))
+    return render_template("tasks.html", words=words)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
