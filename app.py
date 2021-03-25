@@ -80,9 +80,8 @@ def signup():
 
 @app.route("/dictionary")
 def dictionary():
-    form = SearchForm()
     dictionary = list(mongo.db.dictionary.find())
-    return render_template("dictionary.html", dictionary=dictionary, form=form)
+    return render_template("dictionary.html", dictionary=dictionary)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -159,13 +158,11 @@ def contact():
     return render_template('contact.html')
 
 
-@ app.route("/search", methods=["GET", "POST"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
-    form = SearchForm()
-    if request.method == "POST":
-        query = form.word.data
-        words = list(mongo.db.dictionary.find({"$text": {"$search": query}}))
-        return render_template("dictionary.html", words=words, form=form, query=query)
+    search_word = request.form.get("search-word")
+    dictionary = mongo.db.dictionary.find({"$text": {"$search": search_word}})
+    return render_template("dictionary.html", dictionary=dictionary)
 
 
 if __name__ == "__main__":
