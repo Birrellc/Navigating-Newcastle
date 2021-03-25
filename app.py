@@ -2,10 +2,11 @@ import os
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from forms import RegistrationForm, LoginForm, DictionaryForm, UpdateWordForm, SearchForm
+from forms import RegistrationForm, LoginForm, DictionaryForm, UpdateWordForm
 
 if os.path.exists("env.py"):
     import env
@@ -20,9 +21,26 @@ mongo = PyMongo(app)
 users = mongo.db.user
 
 
-# Routes
+# Login decorators
 
-# Render Homepage
+
+def user_logged_in():
+    if session.get('user') is None:
+        return False
+    return True
+
+
+def logged_in_required(func):
+    @wraps(func)
+    def route(*args, **kwargs):
+        if user_logged_in():
+            return func(*args, **kwargs)
+        flash("You need to be logged in to view that!")
+        return redirect(url_for("login"))
+    return route
+
+
+# Routes
 
 
 @app.route("/")
@@ -85,6 +103,7 @@ def dictionary():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
+@logged_in_required
 def profile(username):
     username = users.find_one(
         {"username": session["user"]})['username']
@@ -99,6 +118,7 @@ def profile(username):
 
 
 @app.route("/add_word", methods=["GET", "POST"])
+@logged_in_required
 def add_word():
     form = DictionaryForm()
     if form.validate_on_submit():
@@ -123,6 +143,7 @@ def add_word():
 
 
 @app.route("/update_word/<word_id>", methods=["GET", "POST"])
+@logged_in_required
 def update_word(word_id):
     form = UpdateWordForm()
     word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
@@ -141,12 +162,14 @@ def update_word(word_id):
 
 
 @app.route("/delete_word/<word_id>")
+@logged_in_required
 def delete_word(word_id):
     mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
     return redirect(url_for("dictionary"))
 
 
 @app.route("/logout")
+@logged_in_required
 def logout():
     flash("logged out")
     session.pop("user")
