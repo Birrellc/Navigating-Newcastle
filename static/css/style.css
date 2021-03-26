@@ -16,6 +16,10 @@ body {
   color: #ffffff;
 }
 
+.form-text {
+  color: white;
+}
+
 nav {
   background-color: #555b6e;
 }
@@ -162,8 +166,4 @@ i.fa-envelope {
   font-style: italic;
   letter-spacing: 2px;
   margin-right: 2px;
-}
-
-.cheese {
-  color: white;
 }
