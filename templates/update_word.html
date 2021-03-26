@@ -15,16 +15,25 @@
           <div class="row">
             <div class="form-group col s12">
               {{ form.word.label(class_="form-text") }} {{ form.word }}
+              {% for error in form.word.errors %}
+              <span class="error-text"> {{error}} </span>
+              {% endfor %}
             </div>
           </div>
           <div class="row">
             <div class="form-group col s12">
               {{ form.definition.label(class_="form-text") }} {{ form.definition }}
+              {% for error in form.definition.errors %}
+              <span class="error-text"> {{error}} </span>
+              {% endfor %}
             </div>
           </div>
           <div class="row">
             <div class="form-group col s12">
               {{ form.example.label(class_="form-text") }} {{ form.example }}
+              {% for error in form.example.errors %}
+              <span class="error-text"> {{error}} </span>
+              {% endfor %}
             </div>
           </div>
           <div class="row">{{ form.submit(class_="btn") }}</div>

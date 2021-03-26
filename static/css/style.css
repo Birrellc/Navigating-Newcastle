@@ -46,6 +46,11 @@ nav {
   background-color: #89b0ae;
 }
 
+.error-text {
+  color: red;
+  font-size: 0.7rem;
+}
+
 .footer {
   margin-top: 50px;
   background-color: #555b6e;
