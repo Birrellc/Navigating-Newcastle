@@ -60,13 +60,13 @@ def login():
             if existing_user and check_password_hash(
                     existing_user['password'],
                     form.password.data.encode()):
-                flash("You have Logged in!")
+                flash("You have Logged in!", "logged_in")
                 username = form.username.data
                 session["user"] = username
                 return redirect(url_for("profile", username=session["user"]))
 
         else:
-            flash('incorrect login')
+            flash('incorrect login details', "incorrect")
     return render_template("login.html", form=form)
 
 
@@ -77,8 +77,8 @@ def signup():
         existing_user = users.find_one(
             {"username": form.username.data})
         if existing_user:
-            flash("That user name already exists")
-            return redirect(url_for("login"))
+            flash("That user name already exists", "user_exists")
+            return redirect(url_for("signup"))
 
         hash_password = generate_password_hash(
             form.password.data)
@@ -91,7 +91,7 @@ def signup():
         username = form.username.data
         session["user"] = username
 
-        flash(" Account registered!")
+        flash(" Account registered!", "success")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("signup.html", form=form)
@@ -128,8 +128,7 @@ def add_word():
             {"word": form.word.data})
 
         if existing_word:
-            flash(
-                "your word already exists in our dictionary, sorry!")
+            flash("Your word already exists", "word_exists")
             return redirect(url_for("add_word"))
         words = {
             "word": form.word.data,
@@ -138,8 +137,8 @@ def add_word():
             "added_by": session["user"]
         }
         mongo.db.dictionary.insert_one(words)
-        flash("Your word is now in the dictionary")
-        return redirect(url_for("dictionary"))
+        flash("Your word is now in the dictionary", "word_added")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("add_word.html", form=form)
 
@@ -158,7 +157,7 @@ def update_word(word_id):
             "added_by": session["user"]
         }
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, update)
-        flash("Your word is now in the dictionary")
+        flash("Your word is now in the dictionary", "updated_word")
     return render_template("update_word.html", form=form, word=word,
                            dictionaries=dictionaries)
 
@@ -167,13 +166,14 @@ def update_word(word_id):
 @logged_in_required
 def delete_word(word_id):
     mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
-    return redirect(url_for("dictionary"))
+    flash("Your word has been deleted", "deleted_word")
+    return redirect(url_for("profile", username=session["user"]))
 
 
 @app.route("/logout")
 @logged_in_required
 def logout():
-    flash("logged out")
+    flash("You have been logged out!", "logged_out")
     session.pop("user")
     return redirect(url_for("login"))
 

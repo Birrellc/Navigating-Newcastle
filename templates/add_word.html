@@ -1,5 +1,14 @@
 {% extends "base.html" %} {% block content %}
 <div class="container center-align">
+  <div class="row">
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    "word_exists" %}
+    <div>
+      <h5>{{ message }}</h5>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+  </div>
   <form class="card-panel" method="POST" action="{{ url_for('add_word') }}">
     {{ form.hidden_tag() }}
     <div class="row">

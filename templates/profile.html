@@ -17,6 +17,31 @@
   <span class="card-title">Geordie Dictionary</span>
   <p>Don't forget to add your own!.</p>
 </div>
+<div class="row">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          {% for category, message in messages %}
+              {% if category == "word_added" %}
+                  <div>
+                      <h5>{{ message }}</h5>
+                  </div>
+              {% endif %}
+
+              {% if category == "updated_word" %}
+                  <div>
+                      <h5>{{ message }}</h5>
+                  </div>
+              {% endif %}
+
+              {% if category == "deleted_word" %}
+                  <div>
+                      <h5>{{ message }}</h5>
+                  </div>
+              {% endif %}
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+</div>
 <div class="container">
   <ul class="collapsible">
     {% for word in dictionary %} {% if session.user == word.added_by %}
