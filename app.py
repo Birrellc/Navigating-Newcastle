@@ -53,7 +53,7 @@ def home():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
-    if request.method == "POST":
+    if form.validate_on_submit() and request.method == "POST":
         existing_user = users.find_one(
             {"username": form.username.data})
         if existing_user:
@@ -73,7 +73,7 @@ def login():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = RegistrationForm()
-    if request.method == "POST":
+    if form.validate_on_submit() and request.method == "POST":
         existing_user = users.find_one(
             {"username": form.username.data})
         if existing_user:
@@ -186,7 +186,7 @@ def contact():
 @ app.route("/search", methods=["GET", "POST"])
 def search():
     form = SearchForm()
-    if request.method == "POST":
+    if form.validate_on_submit() and request.method == "POST":
         query = form.word.data
         print(query)
         words = list(mongo.db.dictionary.find({"$text": {"$search": query}}))
