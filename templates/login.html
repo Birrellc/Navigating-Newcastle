@@ -1,4 +1,7 @@
 {% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col s12">
+    <div class="card jumbotron center-align">
 <div class="container center-align">
   <div class="row">
   {% with messages = get_flashed_messages(with_categories=true) %}
@@ -39,5 +42,7 @@
     </p>
   </div>
 </div>
-
+</div>
+</div>
+</div>
 {% endblock %}
