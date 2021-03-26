@@ -69,48 +69,51 @@
         {% endif %}
       </ul>
     </header>
+    <div class="page-container">
+      <section class="main container">
+        {% block content %} {% endblock %}
+      </section>
 
-    <section class="main container">{% block content %} {% endblock %}</section>
-
-    <footer class="footer">
-      <div class="container center-align">
-        <div class="row">
-          <div class="col s12 m6">
-            <h6>Follow Us:</h6>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              class="social-link"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              class="social-link"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a
-              href="https://www.twitter.com/"
-              target="_blank"
-              class="social-link"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <h6>Contact Us:</h6>
-            <a href="mailto:vaiezmedia@gmail.com" class="social-link">
-              <i class="fas fa-envelope"></i>
-              NavNewcastle@MadeUpEmail.com
-            </a>
+      <footer class="footer">
+        <div class="container center-align">
+          <div class="row">
+            <div class="col s12">
+              <h6>Follow Us:</h6>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                class="social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <h6>Contact Us:</h6>
+              <a href="mailto:vaiezmedia@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+                NavNewcastle@MadeUpEmail.com
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="copyright">
-        <div class="center-align container">
-          <a href="https://github.com/BirrellC" target="_blank"
-            >Chris Birrell 2021</a
-          >
+        <div class="copyright">
+          <div class="center-align container">
+            <a href="https://github.com/BirrellC" target="_blank"
+              >Chris Birrell 2021</a
+            >
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
