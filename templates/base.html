@@ -52,7 +52,7 @@
       <!-- mobile sidenav -->
       <ul class="sidenav" id="mobile-demo">
         <li>
-          <h4 class="center-align">Navigating Newcastle</h4>
+          <h4 class="center-align black-text">NN</h4>
         </li>
         <li><a href="{{ url_for('home') }}">Home</a></li>
         {% if session.user %}
@@ -70,9 +70,7 @@
       </ul>
     </header>
 
-    <section class="main container">
-      {% block content %} {% endblock %}
-    </section>
+    <section class="main container">{% block content %} {% endblock %}</section>
 
     <footer class="footer">
       <div class="container center-align">

@@ -4,7 +4,7 @@
     <div class="card jumbotron center-align">
       <div class="container center-align">
         <div class="login-header">
-          <h1 class="login-header">Login Page</h1>
+          <h1 class="login-header">Login</h1>
         </div>
         <div class="row">
           {% with messages = get_flashed_messages(with_categories=true) %} {% if
@@ -35,7 +35,7 @@
         </form>
         <div>
           <p>
-            Dont have an account? <a href="{{ url_for('signup') }}"> Sign In</a>
+            Dont have an account? <a href="{{ url_for('signup') }}"> Sign Up</a>
           </p>
         </div>
       </div>

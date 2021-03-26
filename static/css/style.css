@@ -149,3 +149,14 @@ i.fa-envelope {
   letter-spacing: 2px;
   margin-right: 2px;
 }
+
+/* signup page */
+
+.signup-header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
+}
