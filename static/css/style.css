@@ -13,6 +13,7 @@ body {
   font-family: "Comic Neue", cursive;
   font-weight: 500;
   font-size: 16px;
+  color: #ffffff;
 }
 
 nav {
@@ -103,9 +104,37 @@ i.fa-envelope {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .card-panel {
   background-color: #ffd6ba;
+}
+
+.dictionary-subheader{
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-right: 2px;
+}
+
+/* profile.html */
+
+.profile-btn {
+  padding: 10px;
+}
+
+.profile-header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
+}
+
+.add-word-btn{
+    margin-bottom:3%;
 }

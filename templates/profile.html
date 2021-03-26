@@ -3,18 +3,13 @@
   <div class="card jumbotron center-align">
     <div class="row">
       <div class="header">
-        <h3 class="center-align">{{ username }}</h3>
+        <h3 class="center-align profile-header">{{ username }}'s Page</h3>
       </div>
     </div>
     <div class="container center-align">
       <div class="add-word">
-        <a href="{{ url_for('add_word') }}" class="btn"> Add Word </a>
+        <a href="{{ url_for('add_word') }}" class="btn add-word-btn"> Add Word </a>
       </div>
-    </div>
-
-    <div class="card-content white-text">
-      <span class="card-title">Geordie Dictionary</span>
-      <p>Don't forget to add your own!.</p>
     </div>
     <div class="row">
       {% with messages = get_flashed_messages(with_categories=true) %} {% if

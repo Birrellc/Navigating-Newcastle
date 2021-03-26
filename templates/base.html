@@ -40,7 +40,6 @@
                 >Profile</a
               >
             </li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -63,7 +62,6 @@
             >Profile</a
           >
         </li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
         <li><a href="{{ url_for('login') }}">Log In</a></li>
