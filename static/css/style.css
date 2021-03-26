@@ -25,6 +25,7 @@ nav {
     height: 65vh;
     padding-top: 5%;
     margin-top: 5%;
+    overflow:auto;
 }
 
 .card {
@@ -37,6 +38,7 @@ nav {
 
 .social-link i {
     margin: 0px 20px;
+    color: #FFD6BA;
 }
 
 i.fa-envelope {
