@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Base */
+
 body {
     height: 100vh;
     margin: 0;
@@ -6,6 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #bee3db;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 nav {
@@ -14,11 +22,40 @@ nav {
 
 .jumbotron {
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     padding-top: 5%;
     margin-top: 5%;
 }
 
 .card {
     background-color: #89b0ae;
+}
+
+.footer {
+    background-color: #555b6e;
+}
+
+.social-link i {
+    margin: 0px 20px;
+}
+
+i.fa-envelope {
+    margin-right: 0;
+}
+
+.copyright a {
+    color: black;
+    font-size: 1rem;
+}
+
+/* Index.html */
+
+.navigating-header {
+    font-weight:700;
+    font-size: 3rem;
+    padding-bottom: 15%;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-right: 2px;
 }
