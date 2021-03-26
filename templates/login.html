@@ -23,12 +23,12 @@
           {{ form.hidden_tag() }}
           <div class="row">
             <div class="form-group col s12">
-              {{ form.username.label }} {{ form.username }}
+              {{ form.username.label(class_="form-text") }} {{ form.username }}
             </div>
           </div>
           <div class="row">
             <div class="form-group col s12">
-              {{ form.password.label }} {{ form.password }}
+              {{ form.password.label(class_="form-text") }} {{ form.password }}
             </div>
           </div>
           <div class="row">{{form.submit(class_="btn")}}</div>
