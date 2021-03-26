@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="card-content white-text">
-  <span class="card-title">Geordie Dictionary</span>
-  <p>Don't forget to add your own!.</p>
+  <h1 class="dictionary-header">Geordie Dictionary</h1>
+  <p class="dictionary-text">Don't forget to add your own via your profile page!</p>
 </div>
 <div class="container">
   <div class="container center-align">
@@ -10,11 +10,11 @@
       {{ form.hidden_tag() }}
       <div class="row">
         <div class="form-group col s12">
-          <i class="fas fa-search"></i>Search for your
+          <i class="fas fa-search"></i>
           {{ form.word.label }} {{ form.word }}
         </div>
       </div>
-      <div class="row">{{ form.submit }}</div>
+      <div class="row">{{ form.submit(class_="btn") }}</div>
     </form>
   </div>
   <ul class="collapsible">
@@ -24,10 +24,10 @@
       <div class="collapsible-header">
         <strong class="float-right">{{ word.word }}</strong>
       </div>
-      <div class="collapsible-body">
-        <strong>{{ word.definition }}</strong>
-        <p>{{ word.example }}</p>
-        <p>{{ word.added_by }}</p>
+      <div class="collapsible-body col s12">
+        <p><span>Definition: </span>{{ word.definition }}</p>
+        <p><span>Example: </span>{{ word.example }}</p>
+        <p><span>Added By: </span>{{ word.added_by }}</p>
       </div>
     </li>
     {% endfor %}

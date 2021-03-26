@@ -1,67 +1,109 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 /* Base */
 
 body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    background-color: #bee3db;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 500;
-    font-size: 16px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #bee3db;
+  font-family: "Comic Neue", cursive;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 nav {
-    background-color: #555b6e;
+  background-color: #555b6e;
 }
 
 .jumbotron {
-    width: 100%;
-    height: 65vh;
-    padding-top: 5%;
-    margin-top: 5%;
-    overflow:auto;
+  width: 100%;
+  height: 65vh;
+  padding-top: 5%;
+  margin-top: 5%;
+  overflow: auto;
 }
 
 .card {
-    background-color: #89b0ae;
+  background-color: #89b0ae;
 }
 
 .footer {
-    background-color: #555b6e;
+  background-color: #555b6e;
 }
 
 .social-link i {
-    margin: 0px 20px;
-    color: #FFD6BA;
+  margin: 0px 20px;
+  color: #ffd6ba;
 }
 
 i.fa-envelope {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .copyright a {
-    color: black;
-    font-size: 1rem;
+  color: black;
+  font-size: 1rem;
 }
 
 /* Index.html */
 
 .navigating-header {
-    font-weight:700;
-    font-size: 3rem;
-    padding-bottom: 15%;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: 2px;
-    margin-right: 2px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding-bottom: 15%;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
 }
 
 .home-text {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Dictionary.html */
+
+.dictionary-header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding-bottom: 15%;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
+}
+
+.dictionary-text {
+  font-size: 1.5rem;
+}
+
+.collapsible-header {
+  background-color: #555b6e;
+  font-size: 1.2rem;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.collapsible-body {
+  background-color: #ffd6ba;
+  font-size: 0.8rem;
+  overflow: auto;
+  color: white;
+}
+
+.collapsible {
+  border: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 50px
+}
+
+.card-panel {
+  background-color: #ffd6ba;
 }
