@@ -123,7 +123,7 @@ def profile(username):
 @logged_in_required
 def add_word():
     form = DictionaryForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit() and request.method == "POST":
         existing_word = mongo.db.dictionary.find_one(
             {"word": form.word.data})
 
@@ -149,7 +149,7 @@ def update_word(word_id):
     form = UpdateWordForm()
     word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
     dictionaries = mongo.db.dictionary.find().sort("word", 1)
-    if form.validate_on_submit():
+    if form.validate_on_submit() and request.method == "POST":
         update = {
             "word": form.word.data,
             "definition": form.definition.data,
@@ -158,6 +158,7 @@ def update_word(word_id):
         }
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, update)
         flash("Your word is now in the dictionary", "updated_word")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("update_word.html", form=form, word=word,
                            dictionaries=dictionaries)
 
