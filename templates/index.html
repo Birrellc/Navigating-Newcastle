@@ -3,14 +3,14 @@
 {% block content %}
 
 <div class="card-content white-text">
-    <span class="card-title">Navigating Newcastle</span>
-    <p>
+    <h1 class="navigating-header">Navigating Newcastle</h1>
+    <p class="home-text">
       An online interactive Geordie dictionary.
     </p>
   </div>
   <div class="card-action">
-    <a href="#">Sign Up</a>
-    <a href="#">Login</a>
+    <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+    <a href="{{ url_for('login') }}" class="btn">Login</a>
   </div>
 
 {% endblock %}
