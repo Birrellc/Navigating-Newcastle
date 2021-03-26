@@ -2,47 +2,44 @@
 <div class="row">
   <div class="col s12">
     <div class="card jumbotron center-align">
-<div class="container center-align">
-  <div class="row">
-  {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            {% if category == "logged_out" %}
-                                <div>
-                                    <h5>{{ message }}</h5>
-                                </div>
-                            {% endif %}
-
-                            {% if category == "incorrect" %}
-                                <div>
-                                    <h5>{{ message }}</h5>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-              </div>
-  <form class="card-panel" method="POST" action="{{ url_for('login') }}">
-    {{ form.hidden_tag() }}
-    <div class="row">
-      <div class="form-group col s12">
-        {{ form.username.label }} {{ form.username }}
+      <div class="container center-align">
+        <div class="login-header">
+          <h1 class="login-header">Login Page</h1>
+        </div>
+        <div class="row">
+          {% with messages = get_flashed_messages(with_categories=true) %} {% if
+          messages %} {% for category, message in messages %} {% if category ==
+          "logged_out" %}
+          <div>
+            <h5>{{ message }}</h5>
+          </div>
+          {% endif %} {% if category == "incorrect" %}
+          <div>
+            <h5>{{ message }}</h5>
+          </div>
+          {% endif %} {% endfor %} {% endif %} {% endwith %}
+        </div>
+        <form class="card-panel" method="POST" action="{{ url_for('login') }}">
+          {{ form.hidden_tag() }}
+          <div class="row">
+            <div class="form-group col s12">
+              {{ form.username.label }} {{ form.username }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col s12">
+              {{ form.password.label }} {{ form.password }}
+            </div>
+          </div>
+          <div class="row">{{form.submit(class_="btn")}}</div>
+        </form>
+        <div>
+          <p>
+            Dont have an account? <a href="{{ url_for('signup') }}"> Sign In</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="form-group col s12">
-        {{ form.password.label }} {{ form.password }}
-      </div>
-    </div>
-    <div class="row">{{ form.submit }}</div>
-  </form>
-  <div>
-    <p>
-      Dont have an account? <a href="{{ url_for('signup') }}"> Sign In</a>
-    </p>
   </div>
-</div>
-</div>
-</div>
 </div>
 {% endblock %}

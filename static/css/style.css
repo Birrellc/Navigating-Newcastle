@@ -111,13 +111,13 @@ i.fa-envelope {
   background-color: #ffd6ba;
 }
 
-.dictionary-subheader{
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: 2px;
-    margin-right: 2px;
+.dictionary-subheader {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
 }
 
 /* profile.html */
@@ -135,6 +135,17 @@ i.fa-envelope {
   margin-right: 2px;
 }
 
-.add-word-btn{
-    margin-bottom:3%;
+.add-word-btn {
+  margin-bottom: 3%;
+}
+
+/* login page */
+
+.login-header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-right: 2px;
 }
