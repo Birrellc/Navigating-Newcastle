@@ -11,17 +11,17 @@
           {{ form.hidden_tag() }}
           <div class="row">
             <div class="form-group col s12">
-              {{ form.word.label }} {{ form.word }}
+              {{ form.word.label(class_="form-text") }} {{ form.word }}
             </div>
           </div>
           <div class="row">
             <div class="form-group col s12">
-              {{ form.definition.label }} {{ form.definition }}
+              {{ form.definition.label(class_="form-text") }} {{ form.definition }}
             </div>
           </div>
           <div class="row">
             <div class="form-group col s12">
-              {{ form.example.label }} {{ form.example }}
+              {{ form.example.label(class_="form-text") }} {{ form.example }}
             </div>
           </div>
           <div class="row">{{ form.submit }}</div>
