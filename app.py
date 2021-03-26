@@ -6,7 +6,8 @@ from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from forms import RegistrationForm, LoginForm, DictionaryForm, UpdateWordForm
+from forms import (RegistrationForm,
+                   LoginForm, DictionaryForm, UpdateWordForm, SearchForm)
 
 if os.path.exists("env.py"):
     import env
@@ -98,8 +99,9 @@ def signup():
 
 @app.route("/dictionary")
 def dictionary():
+    form = SearchForm()
     dictionary = list(mongo.db.dictionary.find())
-    return render_template("dictionary.html", dictionary=dictionary)
+    return render_template("dictionary.html", dictionary=dictionary, form=form)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -181,11 +183,15 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route("/search", methods=["GET", "POST"])
+@ app.route("/search", methods=["GET", "POST"])
 def search():
-    search_word = request.form.get("search-word")
-    dictionary = mongo.db.dictionary.find({"$text": {"$search": search_word}})
-    return render_template("dictionary.html", dictionary=dictionary)
+    form = SearchForm()
+    if request.method == "POST":
+        query = form.word.data
+        print(query)
+        words = list(mongo.db.dictionary.find({"$text": {"$search": query}}))
+        return render_template("dictionary.html", dictionary=words,
+                               form=form, query=query)
 
 
 if __name__ == "__main__":

@@ -34,3 +34,7 @@ class UpdateWordForm(FlaskForm):
     example = StringField('Example', validators=[DataRequired()])
     submit = SubmitField('Update Word')
 
+
+class SearchForm(FlaskForm):
+    word = StringField("Word", validators=[DataRequired()])
+    submit = SubmitField("Search Word")
