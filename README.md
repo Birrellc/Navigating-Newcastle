@@ -183,3 +183,51 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - Newsletter system with to send users which words have been added that month.
 - Password reset emails
 
+---
+
+## Technologies
+
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
+### Libraries Frameworks & Plugins
+
+- [Materialize](https://materializecss.com/)
+- [jQuery](https://jquery.com/)
+
+
+### Workspace
+
+- [VSCode](https://code.visualstudio.com/)
+- [Gitpod](https://www.gitpod.io/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+
+### External Resources
+
+- [Google Fonts](https://fonts.google.com/) - Used to import fonts for the website.
+- [W3C HTML Validator](https://validator.w3.org/) - Used to test/validate HTML code on the website.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to test/validate the CSS code on the website.
+- [Pexels](https://https://www.pexels.com/) - Stock image resource.
+- [Tinypng](http://https://tinypng.com/) - Website used to compress my images to allow for faster loading times.
+- [Font Awesome](https://fontawesome.com/) - Used to provide small icons for the website. eg. Testimonial quotes section.
+- [Stack Overflow](https://fonts.google.com/) - Resource which provided the 3 fonts: Anton, Arvo & Montserrat for the website.
+- [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Used to test the loading speed of the website.
+- [Responsivley App](https://responsively.app/) - Used to test responsive web apps.
+- [Real Favicon Generator](https://realfavicongenerator.net/) - Used to create my favicon image and also test to see if it was working.
+- [Spell Checker for Chrome](https://chrome.google.com/webstore/detail/spell-checker-for-chrome/jfpdnkkdgghlpdgldicfgnnnkhdfhocg?hl=en) - Used to spell check my **README.md** & **testing.md**.
+- [W3 Schools](https://www.w3schools.com/) - Used as a general resource to help with coding.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Used to create mockup of responsive website for **README.md**.
+- [Youtube](https://www.w3schools.com/) - Used as a general resource for help with code.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
+- [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
+- [Grammarly(unofficial)](https://marketplace.visualstudio.com/items?itemName=znck.grammarly) - A plugin for VSCode which I used to check the grammar and spelling for my README.md & testing.md docs.
+- [BrowserStack](https://www.browserstack.com) - Used to test my website with the Safari browser.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check accessabilty and SEO scores for the website.
+- [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
+- Code institute Slack Community - Used for inspiration for my website.
