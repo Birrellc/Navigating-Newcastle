@@ -195,10 +195,11 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
-### Libraries Frameworks & Plugins
+### Frameworks
 
 - [Materialize](https://materializecss.com/)
 - [jQuery](https://jquery.com/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
 
 ### Workspace
@@ -231,3 +232,14 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check accessabilty and SEO scores for the website.
 - [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
 - Code institute Slack Community - Used for inspiration for my website.
+
+### Dependencies
+
+- Pymongo and Flask-PyMongo which i used to connect my project to my MongoDB database.
+- Click which is a command line interface toolkit.
+- dnspython which is a dns toolkit for Python.
+- itsdangerous which provides various helpers to pass data to untrusted environments and return it safely.
+- Jinja2 which is a templating language for Python
+- WTforms which is a flexible forms validation and rendering library for Python
+- werkzueg which is used in this project to provide security by hashing user passwords
+
