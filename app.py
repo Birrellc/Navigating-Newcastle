@@ -55,7 +55,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit() and request.method == "POST":
         existing_user = users.find_one(
-            {"username": form.username.data})
+            {"username": form.username.data.lower()})
         if existing_user:
             if existing_user and check_password_hash(
                     existing_user['password'],
@@ -75,7 +75,7 @@ def signup():
     form = RegistrationForm()
     if form.validate_on_submit() and request.method == "POST":
         existing_user = users.find_one(
-            {"username": form.username.data})
+            {"username": form.username.data.lower()})
         if existing_user:
             flash("That user name already exists", "user_exists")
             return redirect(url_for("signup"))
