@@ -134,7 +134,6 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - Users without accounts or not logged in will only be able to see home, login and signup pages
 - Users that are logged in will also 
 
-
 ---
 
 ### Skeleton
@@ -160,3 +159,27 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 #### Images
 
 - I chose only to use one image "[This image](https://github.com/Birrellc/Navigating-Newcastle/tree/master/static/images/nn-home.jpg)" for this project as it was based on a city so i felt i need to represent that city with atleast one image but i did not want to go overboard and distract from the main focus of the website which is the "Dictionary"
+
+---
+
+## Features
+
+### Website Features
+
+- 7 page website overall with add_word, update_word included
+- 3 User Interactive Forms With Validation
+- Account Registration & Login Features
+- CRUD options to create, read, update and delete words for all registered users.
+- Search engine to allow users to search for specific words
+- Social Media - Social media icons will be present on all pages.
+
+
+### Features to be Implemented in the Future
+
+- Google reCAPTCHA.
+- Fully functioning checkout system to add to the shopping cart for successful online orders.
+- Upvote system for popular words.
+- a-z search order
+- Newsletter system with to send users which words have been added that month.
+- Password reset emails
+
