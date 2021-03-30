@@ -268,6 +268,7 @@ Heroku CLI
 
 - Head over to the repository location here(insert link later)
 - Click the 'code' button and download the zip file from the repository or alternatively you can clone the repository by using the following url in your terminal with the commands:
+
 ``` git clone https:/github.com/BirrellC/navigating-newcastle.git ```
 
 ## IDE
@@ -282,6 +283,7 @@ Heroku CLI
 - Head over to your MongoDB account and create a new project called "navigating newcastle"
 - From there create two collections "dictionary" and "user" which contain the keys listed in the database section above
 - Next create a file in the project called "env.py" with the following code:
+
 ```
 import os
 
@@ -303,16 +305,22 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 - Next login to your Heroku account and create a new app.
 - Make sure you have a GitHub Repository for this project.
 - You can then add Heroku to your GitHub Repository by heading to your settings then pasting the URL in your terminal for example:
+
 ``` git remote add heroku https://git.heroku.com/your-heroku-git-url-here ```
+
 - You can then push to heroku with the following command in your terminal:
+
 ``` git push heroku master ```
+
 - Once you are ready to prepare the application for deployment and launch use the command:
+
 ``` heroku ps:scale web=5 ```
 
 ###
 
 - Alternatively you can connect your Heroku app to your GitHub repository for the project by clicking the connect to GitHub as your deployment method in your Heroku deploy settings.
 - Next head over to reveal cvars in your Heroku settings and create the key value pairs for:
+
 ```
 | Key            | Value                      | 
 | ---------------|----------------------------|
