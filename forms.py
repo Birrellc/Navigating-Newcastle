@@ -51,7 +51,6 @@ class UpdateWordForm(FlaskForm):
 
 
 class SearchForm(FlaskForm):
-    word = StringField('Word',
-                       validators=[DataRequired(), Regexp(regex_key,
-                                                          message="Must be alphanumeric not start with a space")])
+    word = StringField("", validators=[DataRequired(), Regexp(regex_key,
+                                                              message="Must be alphanumeric not start with a space")])
     submit = SubmitField("Search Word")

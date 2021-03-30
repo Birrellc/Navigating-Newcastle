@@ -2,47 +2,55 @@
 <div class="row">
   <div class="col s12">
     <div class="card jumbotron center-align">
-<div class="card-content white-text">
-  <h1 class="dictionary-header">Geordie Dictionary</h1>
-  <p class="dictionary-text">Don't forget to add your own via your profile page!</p>
-</div>
-<div class="container">
-  <div class="container center-align">
-    <form class="card-panel" action="{{ url_for('search') }}" method="POST">
-      {{ form.hidden_tag() }}
-      <div class="row">
-        <div class="form-group col s12">
-          <i class="fas fa-search"></i>
-          {{ form.word.label(class_="form-text") }} {{ form.word }}
-          {% for error in form.word.errors %}
-              <span class="error-text"> {{error}} </span>
-              {% endfor %}
+      <div class="card-content white-text">
+        <h1 class="dictionary-header">Geordie Dictionary</h1>
+        <p class="dictionary-text">
+          Don't forget to add your own via your profile page!
+        </p>
+      </div>
+      <div class="container">
+        <div class="container center-align">
+          <form
+            class="card-panel"
+            action="{{ url_for('search') }}"
+            method="POST"
+          >
+            {{ form.hidden_tag() }}
+            <div class="row">
+              <div class="form-group col s12">
+                <i class="fas fa-search"></i>
+                {{ form.word.label(class_="form-text") }} {{ form.word }} {% for
+                error in form.word.errors %}
+                <span class="error-text"> {{error}} </span>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="row center-align">
+              <div class="">{{ form.submit(class_="btn") }}</div>
+
+              <a href="{{ url_for('dictionary') }}" class="btn">Reset</a>
+            </div>
+          </form>
         </div>
+        <h2 class="dictionary-subheader">Dictionary!</h2>
+        <ul class="collapsible">
+          {%if dictionary%} {% for word in dictionary %}
+          <li>
+            <div class="collapsible-header">
+              <strong class="float-right">{{ word.word }}</strong>
+            </div>
+            <div class="collapsible-body col s12">
+              <p><span>Definition: </span>{{ word.definition }}</p>
+              <p><span>Example: </span>{{ word.example }}</p>
+              <p><span>Added By: </span>{{ word.added_by }}</p>
+            </div>
+          </li>
+          {% endfor %} {%else%}
+          <h3 class="center-align">No words found with this name</h3>
+          {%endif%}
+        </ul>
       </div>
-      <div class="row">{{ form.submit(class_="btn") }}</div>
-    </form>
+    </div>
   </div>
-  <h2 class="dictionary-subheader">Dictionary!</h2>
-  <ul class="collapsible">
-    {%if dictionary%}
-    {% for word in dictionary %}
-    <li>
-      <div class="collapsible-header">
-        <strong class="float-right">{{ word.word }}</strong>
-      </div>
-      <div class="collapsible-body col s12">
-        <p><span>Definition: </span>{{ word.definition }}</p>
-        <p><span>Example: </span>{{ word.example }}</p>
-        <p><span>Added By: </span>{{ word.added_by }}</p>
-      </div>
-    </li>
-    {% endfor %}
-    {%else%} 
-      <h3 class="center-align">No words found with this name</h3>
-    {%endif%}
-  </ul>
-</div>
-</div>
-</div>
 </div>
 {% endblock %}

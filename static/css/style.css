@@ -16,6 +16,10 @@ body {
   color: #131212 !important;
 }
 
+.btn {
+  margin-bottom: 5px;
+}
+
 .page-container {
   position: relative;
   min-height: 100vh;
@@ -57,7 +61,7 @@ nav {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 180px;
+  height: 190px;
 }
 
 .social-link i {
