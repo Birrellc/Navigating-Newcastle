@@ -13,7 +13,7 @@ body {
   font-family: "Comic Neue", cursive;
   font-weight: 500;
   font-size: 16px;
-  color: #ffffff;
+  color: #131212 !important;
 }
 
 .page-container {
@@ -118,10 +118,10 @@ i.fa-envelope {
 }
 
 .collapsible-body {
-  background-color: #ffd6ba;
+  background-color: #fff;
   font-size: 0.8rem;
   overflow: auto;
-  color: white;
+  color: black;
 }
 
 .collapsible {
