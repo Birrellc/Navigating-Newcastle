@@ -243,3 +243,89 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - WTforms which is a flexible forms validation and rendering library for Python
 - werkzueg which is used in this project to provide security by hashing user passwords
 
+---
+
+## Testing
+
+Testing has is logged in its own document 
+
+---
+
+### Deployment
+
+This project contains mongodb for storage and is deployed on https://www.heroku.com/
+
+## Prerequisites
+
+In order to deploy the application please ensure that the requirements below are met and installed:
+
+Python3
+Pip
+Git
+Heroku CLI
+
+## Cloning from GitHub
+
+- Head over to the repository location here(insert link later)
+- Click the 'code' button and download the zip file from the repository or alternatively you can clone the repository by using the following url in your terminal with the commands:
+``` git clone https:/github.com/BirrellC/navigating-newcastle.git ```
+
+## IDE
+
+- Open the application in your IDE.
+- In your IDE terminal with the Application folder open type
+``` python -m pip -r requirements.txt ```
+- This will install the required modules for the application
+
+## MongoDB
+
+- Head over to your MongoDB account and create a new project called "navigating newcastle"
+- From there create two collections "dictionary" and "user" which contain the keys listed in the database section above
+- Next create a file in the project called "env.py" with the following code:
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY") #Create a random secret key for your project
+os.environ.setdefault("MONGO_URI", "YOUR_MONGO_URI")
+os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the database name that you created in mongodb
+```
+
+- Next return to MongoDB and click connect on your database, from there click connect your application and copy and paste the link and replace "YOUR_MONGO_URI" in your env.py file.
+- Replace the password with your password for your MongoDB database and the database name.
+
+## Heroku
+
+- First ensure a "Procfile" is created and your requirements.txt is up to date, do this by using the following commands:
+``` pip3 freeze --local > requirements.txt ```
+``` echo web: python app.py > Procfile ```
+- Next login to your Heroku account and create a new app.
+- Make sure you have a GitHub Repository for this project.
+- You can then add Heroku to your GitHub Repository by heading to your settings then pasting the URL in your terminal for example:
+``` git remote add heroku https://git.heroku.com/your-heroku-git-url-here ```
+- You can then push to heroku with the following command in your terminal:
+``` git push heroku master ```
+- Once you are ready to prepare the application for deployment and launch use the command:
+``` heroku ps:scale web=5 ```
+
+###
+
+- Alternatively you can connect your Heroku app to your GitHub repository for the project by clicking the connect to GitHub as your deployment method in your Heroku deploy settings.
+- Next head over to reveal cvars in your Heroku settings and create the key value pairs for:
+```
+| Key            | Value                      | 
+| ---------------|----------------------------|
+| IP             | 0.0.0.0                    |
+| PORT           | 5000                       |
+| SECRET KEY     | YOUR SECRET KEY HERE       |
+| MONGO_URI      | YOUR MONGO URI STRING HERE |
+| MONGO_DBNAME   | YOUR DB NAME HERE          |
+
+- Next head over to Heroku deploy section and click "Deploy Now" in the manual section and after that you can also enable automatic deploy also.
+- The project should now be deployed to Heroku and can be accessed by clicking "Open App".
+
+
+
+
+ 
