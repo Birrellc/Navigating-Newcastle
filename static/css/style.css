@@ -14,7 +14,7 @@ body {
   font-family: "Comic Neue", cursive;
   font-weight: 600;
   font-size: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 h6 {
@@ -63,7 +63,7 @@ nav {
 
 .card {
   background-color: #ddbea9;
-  position:relative;
+  position: relative;
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -111,7 +111,7 @@ nav {
 
 .mail {
   font-size: 1rem !important;
-  color: #F5EDED;
+  color: #f5eded;
 }
 
 i.fa-envelope {
@@ -159,7 +159,7 @@ i.fa-envelope {
 }
 
 .collapsible-body {
-  background-color: #B7B7A4;
+  background-color: #b7b7a4;
   font-size: 0.8rem;
   overflow: auto;
   color: white;
@@ -217,6 +217,11 @@ i.fa-envelope {
   margin-right: 2px;
 }
 
+.signup-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 /* signup page */
 
 .signup-header {
@@ -226,6 +231,11 @@ i.fa-envelope {
   font-style: italic;
   letter-spacing: 2px;
   margin-right: 2px;
+}
+
+.login-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* Update_word.html */
