@@ -248,13 +248,13 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ### Dependencies
 
-- Pymongo and Flask-PyMongo which i used to connect my project to my MongoDB database.
-- Click which is a command line interface toolkit.
-- dnspython which is a dns toolkit for Python.
-- itsdangerous which provides various helpers to pass data to untrusted environments and return it safely.
-- Jinja2 which is a templating language for Python
-- WTforms which is a flexible forms validation and rendering library for Python
-- Werkzueg which is used in this project to provide security by hashing user passwords
+- [Pymongo](https://pypi.org/project/pymongo/https://codeinstitute.net/) and [Pymongo](https://flask-pymongo.readthedocs.io/en/latest/) which i used to connect my project to my MongoDB database.
+- [click](https://pypi.org/project/click/) which is a command line interface toolkit.
+- [dnspython](https://pypi.org/project/dnspython/) which is a dns toolkit for Python.
+- [itsdangerous](https://pypi.org/project/itsdangerous/) which provides various helpers to pass data to untrusted environments and return it safely.
+- [Jinja2](https://pypi.org/project/Jinja2/) which is a templating language for Python
+- [WTForms](https://pypi.org/project/WTForms/) which is a flexible forms validation and rendering library for Python
+- [Werkzueg](https://pypi.org/project/Werkzeug/) which is used in this project to provide security by hashing user passwords
 
 ---
 
@@ -272,10 +272,10 @@ This project contains mongodb for storage and is deployed on https://www.heroku.
 
 In order to deploy the application please ensure that the requirements below are met and installed:
 
-Python3
-Pip
-Git
-Heroku CLI
+[Python3](https://www.python.org/downloads/)
+[Pip](https://pypi.org/project/pip/)
+[Git](https://git-scm.com/downloads)
+[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Cloning from GitHub
 
