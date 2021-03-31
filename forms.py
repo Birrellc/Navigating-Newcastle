@@ -35,7 +35,7 @@ class DictionaryForm(FlaskForm):
     example = StringField('Example:',
                           validators=[DataRequired(), Regexp(regex_key,
                                                              message="Must be alphanumeric not start with a space"), Length(min=2, max=50, message="must be between 2-50 characters")])
-    submit = SubmitField('Add Word:')
+    submit = SubmitField('Add Word')
 
 
 class UpdateWordForm(FlaskForm):
@@ -47,10 +47,10 @@ class UpdateWordForm(FlaskForm):
     example = StringField('Example:',
                           validators=[DataRequired(), Regexp(regex_key,
                                                              message="Must be alphanumeric not start with a space"), Length(min=2, max=50, message="must be between 2-50 characters")])
-    submit = SubmitField('Update Word:')
+    submit = SubmitField('Update Word')
 
 
 class SearchForm(FlaskForm):
     word = StringField("", validators=[DataRequired(), Regexp(regex_key,
                                                               message="Must be alphanumeric not start with a space")])
-    submit = SubmitField("Search Word:")
+    submit = SubmitField("Search Word")
