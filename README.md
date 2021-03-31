@@ -82,7 +82,7 @@ The database used for this project is MongoDB via atlas cloud
 
 ---
 
-### Landing Page
+### Landing Page / Home
 
 The landing page actually was originally designed to contain a main image as the background with a clip path slicing the page but as i got into the development of the project i felt for this specific website and its functions it would be best kept minimal so that the soul focus of the website could be viewed and reached with ease and no distraction. The landing page consists of a simple navbar(sidenav for mobile) and a card used as a jumbotron which contains the heading an image of newcastle and two buttons allowing the user to sign up or login to the website to access the dictionary. At the bottom of the page will be a footer used to display socials for proofing but also provide a contact email for the users to submit any issues( I originally aimed for a contact page but felt that for this project a simple button displayed on the footer of each page allowing for email would be more suited)
 
@@ -90,7 +90,7 @@ The landing page actually was originally designed to contain a main image as the
 
 ### Geordie Dictionary
 
-Inside the main section will be collapsible fields displaying 'Geordie Dialect' words and phrases which can then be opened up when clicked to show definition, an example and who added the word or phrase to the page. Also at the top of the dictionary page is a search bar for the users to search for words specificially incase the list gets too big for users to identify specific works with ease.
+Inside the main section will be collapsible fields displaying 'Geordie Dialect' words and phrases which can then be opened up when clicked to show definition, an example and who added the word or phrase to the page. Also at the top of the dictionary page is a search bar for the users to search for words specificially incase the list gets too big for users to identify specific works with ease. (admin user can update and delete all words on the dictionary page by the use of 2 buttons below each word only the admin can see)
 
 ---
 
@@ -197,6 +197,14 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - Password reset emails
 
 ---
+
+## Security
+
+- URL hijacking security is handled by a [Login Decorator](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/). With this feature I am able to force users whos session cookie does not match the user's profile to be redirected to the login page instead of to the other user's page.
+
+- Form Validation from [WTForms](https://pypi.org/project/WTForms/) is also in place to help with basic form security by prevention of using an initial white space and also validating data correctly to help ensure the information submited is correct.
+
+- Password Hashing is used when the user signs up to the website through [Werkzueg](https://pypi.org/project/Werkzeug/) where a user's password is encoded to a hashkey that also contains a random series of salt characters to add extra protection to the user's password.
 
 ## Technologies
 
