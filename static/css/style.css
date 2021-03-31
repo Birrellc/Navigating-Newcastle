@@ -39,10 +39,15 @@ a {
 
 nav {
   background-color: #cb997e;
+  margin-bottom: 20px;
 }
 
 .sidenav {
   background-color: #ffe8d6;
+}
+
+.brand-logo{
+  margin-left: 25px;
 }
 
 .sidenav > li > a {

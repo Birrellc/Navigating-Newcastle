@@ -25,25 +25,25 @@
   <body>
     <header>
       <!-- top navbar -->
-      <nav class="nav-extended">
+      <nav class="navbar nav-extended">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">NN</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
+          <a href="{{ url_for('home') }}" class="brand-logo">NAVIGATING NEWCASTLE</a>
+          <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
           ></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+          <ul class="right navigating-nav hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
             {% if session.user %}
-            <li><a href="{{ url_for('dictionary') }}">Dictionary</a></li>
+            <li><a href="{{ url_for('dictionary') }}">DICTIONARY</a></li>
             <li>
               <a href="{{ url_for('profile', username=session['user']) }}"
-                >Profile</a
+                >PROFILE</a
               >
             </li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('logout') }}">LOG OUT</a></li>
             {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+            <li><a href="{{ url_for('signup') }}">SIGN UP</a></li>
             {% endif %}
           </ul>
         </div>
