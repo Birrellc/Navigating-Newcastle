@@ -6,14 +6,16 @@
         <h1 class="main-header">Sign Up</h1>
       </div>
       <div class="row">
-        <div class="center-align flash-message">
-          {% with messages = get_flashed_messages(with_categories=true) %} {% if
-          messages %} {% for category, message in messages %} {% if category ==
-          "user_exists" %}
-          <div>
-            <h5>{{ message }}</h5>
+        <div class="col s12">
+          <div class="center-align flash-message">
+            {% with messages = get_flashed_messages(with_categories=true) %} {%
+            if messages %} {% for category, message in messages %} {% if
+            category == "user_exists" %}
+            <div>
+              <h5>{{ message }}</h5>
+            </div>
+            {% endif %} {% endfor %} {% endif %} {% endwith %}
           </div>
-          {% endif %} {% endfor %} {% endif %} {% endwith %}
         </div>
       </div>
       <div class="container center-align">
