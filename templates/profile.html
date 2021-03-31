@@ -1,60 +1,66 @@
 {% extends "base.html" %} {% block content %}
 <div class="row">
-  <div class="card jumbotron center-align">
-    <div class="row">
-      <div class="card-content header">
-        <h3 class="center-align main-header">{{ username }}'s Page</h3>
-      </div>
-    </div>
-    <div class="container center-align">
-      <div class="add-word">
-        <a href="{{ url_for('add_word') }}" class="btn add-word-btn"> Add Word </a>
-      </div>
-    </div>
-    <div class="row">
-      {% with messages = get_flashed_messages(with_categories=true) %} {% if
-      messages %} {% for category, message in messages %} {% if category ==
-      "word_added" %}
-      <div>
-        <h5>{{ message }}</h5>
-      </div>
-      {% endif %} {% if category == "updated_word" %}
-      <div>
-        <h5>{{ message }}</h5>
-      </div>
-      {% endif %} {% if category == "deleted_word" %}
-      <div>
-        <h5>{{ message }}</h5>
-      </div>
-      {% endif %} {% endfor %} {% endif %} {% endwith %}
-    </div>
-    <div class="container">
-      <ul class="collapsible">
-        {% for word in dictionary %} {% if session.user == word.added_by %}
-        <li>
-          <div class="collapsible-header">
-            <strong class="float-right">{{ word.word }}</strong>
+  <div class="col s12">
+    <div class="card jumbotron center-align">
+      <div class="row">
+        <div class="col s12">
+          <div class="card-content header">
+            <h3 class="center-align main-header">{{ username }}'s Page</h3>
           </div>
-          <div class="collapsible-body">
-            <strong>{{ word.definition }}</strong>
-            <p>{{ word.example }}</p>
-            <p>{{ word.added_by }}</p>
-          </div>
-        </li>
-        <div class="profile-btn">
-          <a
-            href="{{ url_for('update_word', word_id=word._id) }}"
-            class="btn-small btn"
-            >Update</a
-          >
-          <a
-            href="{{ url_for('delete_word', word_id=word._id) }}"
-            class="btn-small btn"
-            >Delete</a
-          >
         </div>
-        {% endif %} {% endfor %}
-      </ul>
+        <div class="container center-align">
+          <div class="add-word">
+            <a href="{{ url_for('add_word') }}" class="btn add-word-btn">
+              Add Word
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          {% with messages = get_flashed_messages(with_categories=true) %} {% if
+          messages %} {% for category, message in messages %} {% if category ==
+          "word_added" %}
+          <div>
+            <h5>{{ message }}</h5>
+          </div>
+          {% endif %} {% if category == "updated_word" %}
+          <div>
+            <h5>{{ message }}</h5>
+          </div>
+          {% endif %} {% if category == "deleted_word" %}
+          <div>
+            <h5>{{ message }}</h5>
+          </div>
+          {% endif %} {% endfor %} {% endif %} {% endwith %}
+        </div>
+        <div class="container">
+          <ul class="collapsible">
+            {% for word in dictionary %} {% if session.user == word.added_by %}
+            <li>
+              <div class="collapsible-header">
+                <strong class="float-right">{{ word.word }}</strong>
+              </div>
+              <div class="collapsible-body">
+                <strong>{{ word.definition }}</strong>
+                <p>{{ word.example }}</p>
+                <p>{{ word.added_by }}</p>
+              </div>
+            </li>
+            <div class="profile-btn">
+              <a
+                href="{{ url_for('update_word', word_id=word._id) }}"
+                class="btn-small btn"
+                >Update</a
+              >
+              <a
+                href="{{ url_for('delete_word', word_id=word._id) }}"
+                class="btn-small btn"
+                >Delete</a
+              >
+            </div>
+            {% endif %} {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
