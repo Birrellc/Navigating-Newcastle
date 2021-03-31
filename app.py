@@ -64,9 +64,7 @@ def login():
                 username = form.username.data.lower()
                 session["user"] = username
                 return redirect(url_for("profile", username=session["user"]))
-
-        else:
-            flash('incorrect login details', "incorrect")
+        flash('Incorrect login details', "incorrect")
     return render_template("login.html", form=form)
 
 
