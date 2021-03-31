@@ -28,7 +28,7 @@ class LoginForm(FlaskForm):
 
 class DictionaryForm(FlaskForm):
     word = StringField('Word',
-                       validators=[DataRequired(), Regexp(regex_key,
+                       validators=[DataRequired(), Length(min=2, max=15, message="must be between 2-15 characters"), Regexp(regex_key,
                                                           message="Must be alphanumeric not start with a space")])
     definition = StringField('Definition', validators=[DataRequired(), Regexp(regex_key,
                                                                               message="Must be alphanumeric not start with a space"), Length(min=2, max=25, message="must be between 2-25 characters")])
