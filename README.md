@@ -104,6 +104,15 @@ The profile page will consist of a heading that lists the users username at the 
 
 The login page & sign up pages are very similar so will be listed as one, these pages consist of forms created with WTforms which allow the users to login or signup to the website on completion of the form
 
+
+### ERROR PAGES 403, 404 & 500
+
+There will be 3 very basic error pages for this website in order to help the user if anything does go wrong.
+- 403: for any attempts access pages the user should not be able to (I actually have a login decorator that redirects users to a login page if they try hijack a url the 403 page is just there for future)
+- 404: for any incorrect page url's
+- 500: for any internal service errors
+
+
 ### Strategy Plane
 
 The purpose of the website created is to be a modern focus on the well known 'Geordie Dialect' and also encouraging community by allowing users to submit content to the website.
@@ -169,9 +178,11 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - 7 page website overall with add_word, update_word included
 - 3 User Interactive Forms With Validation
 - Account Registration & Login Features
+- Interactive dictionary application
 - CRUD options to create, read, update and delete words for all registered users.
 - Search engine to allow users to search for specific words
-- Social Media - Social media icons will be present on all pages.
+- Social media icons will be present on all pages.
+- Error pages to help any users if there are any errors
 
 
 ### Features to be Implemented in the Future
@@ -241,7 +252,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - itsdangerous which provides various helpers to pass data to untrusted environments and return it safely.
 - Jinja2 which is a templating language for Python
 - WTforms which is a flexible forms validation and rendering library for Python
-- werkzueg which is used in this project to provide security by hashing user passwords
+- Werkzueg which is used in this project to provide security by hashing user passwords
 
 ---
 
