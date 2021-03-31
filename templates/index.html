@@ -1,23 +1,23 @@
-{% extends "base.html" %} 
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="row">
   <div class="col s12">
     <div class="card jumbotron center-align">
-<div class="card-content white-text">
-    <h1 class="main-header">Navigating Newcastle</h1>
-    <div class="image">
-      <img class="responsive-img main-img" src="../static/images/nn-home.jpg" alt="Newcastle City Image">
+      <div class="card-content white-text">
+        <h1 class="main-header">Navigating Newcastle</h1>
+        <div class="image">
+          <img
+            class="responsive-img main-img"
+            src="../static/images/nn-home.jpg"
+            alt="Newcastle City Image"
+          />
+        </div>
+        <p class="home-text">An online interactive Geordie dictionary.</p>
+      </div>
+      <div class="card-action">
+        <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="btn">Login</a>
+      </div>
     </div>
-    <p class="home-text">
-      An online interactive Geordie dictionary.
-    </p>
   </div>
-  <div class="card-action">
-    <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
-    <a href="{{ url_for('login') }}" class="btn">Login</a>
-  </div>
-</div>
-</div>
 </div>
 {% endblock %}
