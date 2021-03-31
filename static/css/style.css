@@ -9,15 +9,11 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: #bee3db;
+  background-color: #ffe8d6;
   font-family: "Comic Neue", cursive;
-  font-weight: 500;
-  font-size: 16px;
-  color: #131212 !important;
-}
-
-.btn {
-  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #fff !important;
 }
 
 .page-container {
@@ -29,13 +25,13 @@ body {
   padding-bottom: 180px;
 }
 
-.form-text {
-  color: white;
-}
+/* Nav */
 
 nav {
-  background-color: #555b6e;
+  background-color: #cb997e;
 }
+
+/* Main Panel Area (sitewide) */
 
 .jumbotron {
   position: relative;
@@ -47,7 +43,7 @@ nav {
 }
 
 .card {
-  background-color: #89b0ae;
+  background-color: #ddbea9;
 }
 
 .error-text {
@@ -55,9 +51,20 @@ nav {
   font-size: 0.7rem;
 }
 
+.btn {
+  background-color: #83c5be;
+  margin-bottom: 5px;
+}
+
+.form-text {
+  color: #131212;
+}
+
+/* Footer */
+
 .footer {
   margin-top: 50px;
-  background-color: #555b6e;
+  background-color: #cb997e;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -115,17 +122,17 @@ i.fa-envelope {
 }
 
 .collapsible-header {
-  background-color: #555b6e;
+  background-color: #cb997e;
   font-size: 1.2rem;
   justify-content: center;
   color: #ffffff;
 }
 
 .collapsible-body {
-  background-color: #fff;
+  background-color: #B7B7A4;
   font-size: 0.8rem;
   overflow: auto;
-  color: black;
+  color: white;
 }
 
 .collapsible {
