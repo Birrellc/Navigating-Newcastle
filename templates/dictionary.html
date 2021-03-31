@@ -45,7 +45,21 @@
               <p><span>Added By: </span>{{ word.added_by }}</p>
             </div>
           </li>
-          {% endfor %} {%else%}
+          {% if session.user == "admin" %}
+          <!-- Edit Button -->
+          <div class="profile-btn">
+            <a
+              href="{{ url_for('update_word', word_id=word._id) }}"
+              class="btn-small btn"
+              >Update</a
+            >
+            <a
+              href="{{ url_for('delete_word', word_id=word._id) }}"
+              class="btn-small btn"
+              >Delete</a
+            >
+          </div>
+          {% endif %} {% endfor %} {%else%}
           <h3 class="center-align none-found">No words found</h3>
           {%endif%}
         </ul>
