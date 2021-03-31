@@ -104,14 +104,16 @@ The profile page will consist of a heading that lists the users username at the 
 
 The login page & sign up pages are very similar so will be listed as one, these pages consist of forms created with WTforms which allow the users to login or signup to the website on completion of the form
 
+---
 
-### ERROR PAGES 403, 404 & 500
+### Error Pages 403, 404 & 500
 
 There will be 3 very basic error pages for this website in order to help the user if anything does go wrong.
-- 403: for any attempts access pages the user should not be able to (I actually have a login decorator that redirects users to a login page if they try hijack a url the 403 page is just there for future)
-- 404: for any incorrect page url's
-- 500: for any internal service errors
+- 403: for any attempts access pages the user should not be able to (I actually have a login decorator that redirects users to a login page if they try hijack a url the 403 page is just there for future).
+- 404: for any incorrect page url's.
+- 500: for any internal service errors.
 
+---
 
 ### Strategy Plane
 
@@ -205,6 +207,8 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - Form Validation from [WTForms](https://pypi.org/project/WTForms/) is also in place to help with basic form security by prevention of using an initial white space and also validating data correctly to help ensure the information submited is correct.
 
 - Password Hashing is used when the user signs up to the website through [Werkzueg](https://pypi.org/project/Werkzeug/) where a user's password is encoded to a hashkey that also contains a random series of salt characters to add extra protection to the user's password.
+
+---
 
 ## Technologies
 
