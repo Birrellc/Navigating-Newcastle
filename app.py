@@ -61,7 +61,7 @@ def login():
                     existing_user['password'],
                     form.password.data.encode()):
                 flash("You have Logged in!", "logged_in")
-                username = form.username.data
+                username = form.username.data.lower()
                 session["user"] = username
                 return redirect(url_for("profile", username=session["user"]))
 
@@ -131,9 +131,9 @@ def add_word():
             flash("Your word already exists", "word_exists")
             return redirect(url_for("add_word"))
         words = {
-            "word": form.word.data,
-            "definition": form.definition.data,
-            "example": form.example.data,
+            "word": form.word.data.capitalize(),
+            "definition": form.definition.data.capitalize(),
+            "example": form.example.data.capitalize(),
             "added_by": session["user"]
         }
         mongo.db.dictionary.insert_one(words)
@@ -151,9 +151,9 @@ def update_word(word_id):
     dictionaries = mongo.db.dictionary.find().sort("word", 1)
     if form.validate_on_submit() and request.method == "POST":
         update = {
-            "word": form.word.data,
-            "definition": form.definition.data,
-            "example": form.example.data,
+            "word": form.word.data.capitalize(),
+            "definition": form.definition.data.capitalize(),
+            "example": form.example.data.capitalize(),
             "added_by": session["user"]
         }
         mongo.db.dictionary.update({"_id": ObjectId(word_id)}, update)
