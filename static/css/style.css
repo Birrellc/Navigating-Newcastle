@@ -206,6 +206,10 @@ i.fa-envelope {
   margin-right: 2px;
 }
 
+.profile-text {
+  font-size: 1.5rem;
+}
+
 .add-word-btn {
   margin-bottom: 3%;
 }
@@ -240,26 +244,4 @@ i.fa-envelope {
 .login-link {
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-/* Update_word.html */
-
-.update-header {
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: 2px;
-  margin-right: 2px;
-}
-
-/* add_word.html */
-
-.add-word-header {
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: 2px;
-  margin-right: 2px;
 }
