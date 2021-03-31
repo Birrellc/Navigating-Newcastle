@@ -40,10 +40,10 @@
             {% for word in dictionary %} {% if session.user == word.added_by %}
             <li>
               <div class="collapsible-header">
-                <strong class="float-right">{{ word.word }}</strong>
+                <p>{{ word.word }}</p>
               </div>
               <div class="collapsible-body">
-                <strong>{{ word.definition }}</strong>
+                <p>{{ word.definition }}</p>
                 <p>{{ word.example }}</p>
                 <p>{{ word.added_by }}</p>
               </div>
