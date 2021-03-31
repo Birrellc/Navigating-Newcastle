@@ -42,8 +42,20 @@ nav {
   overflow: auto;
 }
 
+.main-header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 2px;
+}
+
 .card {
   background-color: #ddbea9;
+}
+
+.card > .card-action {
+  border-top: none;
 }
 
 .error-text {
@@ -88,21 +100,13 @@ i.fa-envelope {
 
 /* Index.html */
 
-.navigating-header {
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: 2px;
-  margin-right: 2px;
-}
-
 .main-img {
   height: 100%;
   width: 100%;
 }
 
 .home-text {
+  padding-top: 20px;
   font-size: 1.5rem;
 }
 
