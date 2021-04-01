@@ -4,6 +4,8 @@
 
 ## Description
 
+![PICTURE](../master/static/testing/test-images/nn-amiresponsive.png)
+
 _this is a fictitious website created for my milestone project 3 with the code institute_.
 
 An online website on "Geordie" dialect which is a rather well known accent widely recognised for being very distinct with many jargon/slang terms used instead of "proper" english. This website will allow users to view "Geordie Slang" and also add their own also with definitions of what each term means incase people ever visit Newcastle.
@@ -306,7 +308,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ## Testing
 
-Testing has is logged in its own document [HERE](../testing/testing.md)
+Testing has is logged in its own document [HERE](../master/static/testing/testing.md)
 
 ---
 
