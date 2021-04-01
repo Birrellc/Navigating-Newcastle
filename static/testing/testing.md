@@ -216,52 +216,56 @@ Throughout this project i tested things manually via a preview environment and a
 
 All testing below is done on both the deployed live website and also the live preview.
 
-### Nav
+
+### NAV
 
 - Main
 
-Clicked 'NN' (brand name) which successfully took me back to the Home Page.
-Clicked the Hamburger icon in the top right which successfully opened the sidenav on mobile devices.
+1. Clicked 'NN' (brand name) which successfully took me back to the Home Page.
+2. Clicked the Hamburger icon in the top right which successfully opened the sidenav on mobile devices.
 
 - Before logging in:
 
-Clicked 'Home' which successfully took me back to Home Page.
-Clicked 'Sign Up' which successfully took me back to the Signup Page.
-Clicked 'Login' which successfully took me back to Login Page.
+1. Clicked 'Home' which successfully took me back to Home Page.
+2. Clicked 'Sign Up' which successfully took me back to the Signup Page.
+3. Clicked 'Login' which successfully took me back to Login Page.
 
 - After Logging in:
 
-Clicked 'Home' which successfully took me back to Homepage.
-Clicked 'Profile' Which successfully took me to my own Profile Page.
-Clicked 'Dictionary' Which successfully took me to the Dictionary Page.
-Clicked 'Log Out' which successfully logged me out and took me to the Login Page.
+1. Clicked 'Home' which successfully took me back to Homepage.
+2. Clicked 'Profile' Which successfully took me to my own Profile Page.
+3. Clicked 'Dictionary' Which successfully took me to the Dictionary Page.
+4. Clicked 'Log Out' which successfully logged me out and took me to the Login Page.
 
 - While testing these features in mobile view i found that the link area's around the actual links would sometimes open the wrong link when clicked i fixed this by switching my display to flex and removing the padding-top style i was using on the elements which can be found in the commit [HERE](https://github.com/Birrellc/Navigating-Newcastle/commit/0221fde9590b9fde4068ee67917e6caf43451cb5)
 
-### Footer
+
+### FOOTER
 
 - Socials
 
-Clicked the 'Facebook' icon which successfully opened Facebook.
-Clicked the 'Instagram' icon which successfully opened Instagram.
-Clicked the 'Twitter' icon which successfully opened Twitter.
+1. Clicked the 'Facebook' icon which successfully opened Facebook.
+2. Clicked the 'Instagram' icon which successfully opened Instagram.
+3. Clicked the 'Twitter' icon which successfully opened Twitter.
 
 - Mail
 
-Clicked the 'Mail' icon which successfully opened Mail on my PC.
-Clicked the 'Email' icon which successfully opened Mail on my PC.
+1. Clicked the 'Mail' icon which successfully opened Mail on my PC.
+2. Clicked the 'Email' icon which successfully opened Mail on my PC.
 
 - Copyright
 
-Clicked the 'GitHub' icon which successfully loaded my GitHub profile page.
-Clicked my 'name' which successfully loaded my GitHub profile page.
+1. Clicked the 'GitHub' icon which successfully loaded my GitHub profile page.
+2. Clicked my 'name' which successfully loaded my GitHub profile page.
 
-### Home (index.html)
 
-Clicked 'Login' Button which successfully opened the Login Page.
-Clicked 'Sign Up' Button which successfully opened the Sign Up Page.
+### HOME (index.html)
 
-### Sign Up (signup.html)
+1. Clicked 'Login' Button which successfully opened the Login Page.
+2. Clicked 'Sign Up' Button which successfully opened the Sign Up Page.
+
+
+### SIGN UP (signup.html)
 
 - Basic Sign Up Functionality:
 
@@ -298,9 +302,10 @@ Tests 8 & 9 failed originally but i corrected the code and then retested and the
 
 - Link:
 
-Clicked the link at the end of 'Already have an account? Login' and was successfully redirected to the Login Page.
+1. Clicked the link at the end of 'Already have an account? Login' and was successfully redirected to the Login Page.
 
-### Login (login.html)
+
+### LOGIN (login.html)
 
 - Basic Login Functionality:
 
@@ -328,13 +333,15 @@ Entered 'Test05' as username and 'password' as password then clicked Login butto
 
 - Link:
 
-Clicked the link at the end of 'Dont have an account? Sign Up' and was successfully redirected to the Sign Up Page.
+1. Clicked the link at the end of 'Dont have an account? Sign Up' and was successfully redirected to the Sign Up Page.
 
-### Add Word (add_word.html)
+
+### ADD WORD (add_word.html)
 
 - Base Add Word Functionality Test:
 
 Typed 'test' in the word field, typed 'test definition' in the definition field, typed 'test example' in the example field then i clicked the 'Add Word' button and the word was added to the dictionary and my profile page successfully.
+
 
 - Validation Rules
 
@@ -368,7 +375,8 @@ Typed 'test' in the word field, typed 'test definition' in the definition field,
 15. Tried to create an example starting with a white space which failed wit the correct message.
 16. Tried to create an example ending with a white space which failed wit the correct message.
 
-### Update Word (update_word.html)
+
+### UPDATE WORD (update_word.html)
 
 - Base Update Word Functionality Test:
 
@@ -407,4 +415,68 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 
 - Validation Notes
 
-*** BUG FOUND *** - while doing my tests for update_word.html I found that if I update my own word for example 'test' to 'test1' test will be replaced and no longer exist but if another user created test1 before i updated test to test1 there would then be 2 test1's in the dictionary.
+**_ BUG FOUND _** - while doing my tests for update_word.html I found that if I update my own word for example 'test' to 'test1' test will be replaced and no longer exist but if another user created test1 before i updated test to test1 there would then be 2 test1's in the dictionary.
+
+
+### PROFILE (profile.html)
+
+- Visability:
+
+1. Correct username displays on page.
+2. Correct words display on page.
+3. Correct buttons display on page.
+
+- Features:
+
+1. Clicked 'Add Word' button which loads the 'add_word' page correctly.
+2. Clicked 'Update' button which loads the 'update_word' page correctly.
+3. Clicked 'Delete' button which deletes the word from the page as expected.
+4. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
+
+
+### DICTIONARY (dictionary.html)
+
+- Visability:
+
+1. Search bar displays correctly.
+2. Dictionary collapsible and words appear correctly on page.
+3. Correct buttons display on page.
+4. (admin) Update buttons and Delete buttons for every word appear if user is logged as admin.
+
+- Features:
+
+1. (admin)Clicked 'Update' button which loads the 'update_word' page correctly.
+2. (admin)Clicked 'Delete' button which deletes the word from the page as expected.
+3. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
+4. Typed 'test' (which was created earlier but will be removed before submission) to the search bar and hit search and the dictionary returned the word test as a collapisible with its definition, example and added by inside correctly.
+5. After displaying only 'test' i clicked the reset button which reloaded the page and displayed the rest of the dictionary again as expected.
+
+- Search Bar Validation Rules:
+
+1. Word being searched cannot start or end with a whitespace.
+
+
+### Error pages (403.html, 404.html 500.Html)
+
+#### 403
+
+- This is a forbidden page inplace incase it is ever needed in future development as currently i'm using login decorators instead.
+
+Navigated to [/403.html](http://navigating-newcastle.herokuapp.com/403.html) which correctly loaded the page.
+Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
+
+#### 404
+
+- This is a does not exist page used for whenever a user tries to navigate to a page on the website that doesnt exist.
+
+1. Navigated to [/404.html](http://navigating-newcastle.herokuapp.com/404.html) which correctly loaded the page.
+2. Navigated to [http://navigating-newcastle.herokuapp.com/NotaRealPage.html](http://navigating-newcastle.herokuapp.com/404.html) and was redirected to the 404.html error page instead as expected.
+3. Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
+
+
+#### 500
+
+- This is an Internal Server Error page used incase the web app every overloads or fails.
+
+1. Navigated to [/500.html](http://navigating-newcastle.herokuapp.com/500.html) and was redirected to the 500.html error page.
+2. Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
