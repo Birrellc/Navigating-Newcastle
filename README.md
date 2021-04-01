@@ -54,12 +54,25 @@ The database used for this project is MongoDB via Atlas Cloud.
 The prcoess of this database for the 'user' to sign up to the website which will create a document in the User collection on MongoDB which contains their 'username' and a hashed version of their password for encryption. From their the website creates a 'user' key in session storage which is assigned to their username which then creates a unique profile page for that 'user'.
 Once the 'user' reaches their profile page they can create a word. When the 'user' creates a word they will be asked to provide a word, definition and an example which will then be submitted to the dictionary collection in the database. To tie the 'user' to their created word their username will be attached to the word with the key added_by which will be available in the website dictionary for them and others to see but also gives the 'user' access to the specific words they create in order to edit and delete those words if they choose to.
 
-| Signup / Login     |          | Profile            |          | Dictionary     |
-| -------------------|          |--------------------|          | ---------------|
-| Authenticate       |   --->   | Add Word           |   --->   | Search Words   |
-| Create User        |          | Update Word        |          | View All Words |
-                                | Delete Word        |          
-                                | View Own Words     |
+| Signup / Login     |
+| -------------------|
+| Authenticate       |
+| Create User        |
+
+
+| Profile            |
+|--------------------|
+| Add Word           |
+| Update Word        |
+| Delete Word        |
+| View Own Words     |
+
+
+| Dictionary     |
+| ---------------|
+| Search Words   |
+| View All Words |
+
 ---
 
 ### User Stories
