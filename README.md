@@ -306,7 +306,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ## Testing
 
-Testing has is logged in its own document [HERE](../static/testing/testing.md)
+Testing has is logged in its own document [HERE](../testing/testing.md)
 
 ---
 
