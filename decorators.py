@@ -1,13 +1,14 @@
 from functools import wraps
 from flask import flash, redirect, url_for, session
 
-
+# Function used by the Logged_in_required function to check if there is a user in session data
 def user_logged_in():
     if session.get('user') is None:
         return False
     return True
 
 
+# Login Decorator function used to return user to the login page if they try access another account which is not their own
 def logged_in_required(func):
     @wraps(func)
     def route(*args, **kwargs):
