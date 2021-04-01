@@ -4,7 +4,7 @@
 
 ## Description
 
-![PICTURE](../master/static/testing/test-images/nn-amiresponsive.png)
+![PICTURE](https://github.com/Birrellc/Navigating-Newcastle/blob/master/static/testing/test-images/nn-amiresponsive.png)
 
 _this is a fictitious website created for my milestone project 3 with the code institute_.
 
@@ -308,7 +308,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ## Testing
 
-Testing has is logged in its own document [HERE](../master/static/testing/testing.md)
+Testing has is logged in its own document [HERE](https://github.com/Birrellc/Navigating-Newcastle/blob/master/static/testing/testing.md)
 
 ---
 
