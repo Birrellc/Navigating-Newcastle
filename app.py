@@ -119,7 +119,7 @@ def add_word():
     form = DictionaryForm()
     if form.validate_on_submit() and request.method == "POST":
         existing_word = dict.find_one(
-            {"word": form.word.data})
+            {"word": form.word.data.capitalize()})
 
         if existing_word:
             flash("Your word already exists", "word_exists")
