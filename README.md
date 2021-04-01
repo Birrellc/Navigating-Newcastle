@@ -402,6 +402,8 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 - [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) & [100 days of Python Code](https://www.udemy.com/course/100-days-of-code/learn/lecture/22372310?start=0#notes)  - Without the documentation resource and one of the lessons in this course I wouldn't have been able to set up the forums the way I would have wanted.
 - [Code Institute](https://codeinstitute.net/) - Alot of this project comes from the course material provided by Code Institute.
 - [Markdown Colors](https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file/41247934#41247934) - Thanks to this post i was able to add color to my Readme.md file.
+- [StackOverflow](https://stackoverflow.com/questions/22084886/add-a-css-class-to-a-field-in-wtform) - For help with adding classes to WTforms
+- [Flask Cheat Sheet](https://s3.us-east-2.amazonaws.com/prettyprinted/flask_cheatsheet.pdf) - I found this helpful when going through my project when i forgot how to correctly structure routes and other Flask elements
 
 ### Media
 
