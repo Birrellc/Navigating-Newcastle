@@ -92,7 +92,7 @@ Once the 'user' reaches their profile page they can create a word. When the 'use
 - As the owner of this website i would like to have my website useable on all platforms from mobile phones to desktop.
 - As the owner of this website i would like users to be able to navigate through my website easily.
 - As the owner of this website i would like to provide users with the ability to sign up and login with little effort.
-- As the owner of this website i would like to users to be able to access all pages apart from the profile page without signing up.
+- As the owner of this website i would like users to be required to sign up to view the main content of this website.
 - As the owner of this website i would like users to be able to add their own "Geordie Words" to the website and also edit and delete them.
 - As the owner of this website i would like it to be made possible for the users to contact me via email.
 
