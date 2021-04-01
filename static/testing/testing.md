@@ -209,3 +209,98 @@ Full list of tested resolutions with [DevTools](https://developer.chrome.com/doc
 9. Desktop 1920px
 
 ---
+
+## Manual Testing
+
+Throughout this project i tested things manually via a preview environment and also on the live heroku hosted website due to having deployed early in the process.
+
+All testing below is done on both the deployed live website and also the live preview.
+
+### Nav
+
+- Main
+
+Clicked 'NN' (brand name) which successfully took me back to the Home Page.
+Clicked the Hamburger icon in the top right which successfully opened the sidenav on mobile devices.
+
+- Before logging in:
+
+Clicked 'Home' which successfully took me back to Home Page.
+Clicked 'Sign Up' which successfully took me back to the Signup Page.
+Clicked 'Login' which successfully took me back to Login Page.
+
+- After Logging in:
+
+Clicked 'Home' which successfully took me back to Homepage.
+Clicked 'Profile' Which successfully took me to my own Profile Page.
+Clicked 'Dictionary' Which successfully took me to the Dictionary Page.
+Clicked 'Log Out' which successfully logged me out and took me to the Login Page.
+
+- While testing these features in mobile view i found that the link area's around the actual links would sometimes open the wrong link when clicked i fixed this by switching my display to flex and removing the padding-top style i was using on the elements which can be found in the commit [HERE](https://github.com/Birrellc/Navigating-Newcastle/commit/0221fde9590b9fde4068ee67917e6caf43451cb5)
+
+### Footer
+
+- Socials
+
+Clicked the 'Facebook' icon which successfully opened Facebook.
+Clicked the 'Instagram' icon which successfully opened Instagram.
+Clicked the 'Twitter' icon which successfully opened Twitter.
+
+- Mail
+
+Clicked the 'Mail' icon which successfully opened Mail on my PC.
+Clicked the 'Email' icon which successfully opened Mail on my PC.
+
+- Copyright
+
+Clicked the 'GitHub' icon which successfully loaded my GitHub profile page.
+Clicked my 'name' which successfully loaded my GitHub profile page.
+
+### Home (index.html)
+
+Clicked 'Login' Button which successfully opened the Login Page.
+Clicked 'Sign Up' Button which successfully opened the Sign Up Page.
+
+### Sign Up (signup.html)
+
+- Basic Sign Up Functionality:
+
+Entered 'Test05' as username and 'password' as password then clicked Sign Up Button and the account was successfully created with the correct message displayed on the profile page also.
+
+- Authentication Test:
+
+1. Tried to sign up as Test05 again and the signup failed with the correct error message.
+2. Tried to sign up as TEST05 again and the signup failed with the correct error message.
+3. Tried to sign up as TE and the signup failed with the correct error message.
+4. Tried to sign up as test12345678912345 and the signup failed with the correct error message.
+5. Tried to sign up as test06 but with a whitespace at the start and the signup failed with the  correct error message.
+6. Tried to sign up as test06 but with a whitespace at the end and the signup failed with the correct error message.
+7. Tried to sign up as test06 with the password 'pass' and the signup failed again with the correct error message.
+8. Tried to sign up as test06 with the password 'password' but with a whitepace at the start signup failed again with the correct error message after changes. 
+9. Tried to sign up as test06 with the password 'password' but with a whitespace at the end signup failed again with the correct error message after changes. 
+
+- Authentication Test Notes:
+
+Tests 8 & 9 failed originally but i corrected the code and then retested and they both passed the tests you can find the commit of the change [HERE](https://github.com/Birrellc/Navigating-Newcastle/commit/335e5cbc2f3283f3793123284f91c29050b090bd)
+
+- Link:
+
+Clicked the link at the end of 'Already have an account? Login' and was successfully redirected to the Login Page.
+
+### Login (login.html)
+
+- Basic Login Functionality:
+
+Entered 'Test05' as username and 'password' as password then clicked Login button and was successfully logged in a taken to 'Test05' Profile Page.
+
+- Authentication Test:
+
+1. Tried to Login as Test05 with an incorrect password and login failed with the correct error message.
+2. Tried to Login as TEST05 and the login was successful as Login is not case sensitive.
+3. Tried to login as Test20 which doesnt exist and login failed with tthe correct error message
+4. Tried to Login as Test05 with the correct password apart from a whitespace at the end and the login failed with the correct error message.
+5. Tried to Login as Test05 with the correct password apart from a whitespace at the start and the login failed with the correct error message.
+
+- Link:
+
+Clicked the link at the end of 'Dont have an account? Sign Up' and was successfully redirected to the Sign Up Page.
