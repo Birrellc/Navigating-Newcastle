@@ -18,7 +18,9 @@ class RegistrationForm(FlaskForm):
                              validators=[
                                  DataRequired(),
                                  Length(min=8,
-                                        message="Password must be atleast 8 letters long")])
+                                        message="Password must be atleast 8 letters long"),
+                                 Regexp(regex_key,
+                                        message="Password not start or end with a space")])
     submit = SubmitField('Sign Up')
 
 
@@ -34,7 +36,9 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password:', validators=[
         DataRequired(),
         Length(min=8,
-               message="Password must be atleast 8 letters long")])
+               message="Password must be atleast 8 letters long"),
+        Regexp(regex_key,
+               message="Password not start or end with a space")])
 
     submit = SubmitField('Login')
 
