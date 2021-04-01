@@ -84,6 +84,7 @@ Once the 'user' reaches their profile page they can create a word. When the 'use
 - As a user i would like to be able to contact the owner of the website with any issues or suggestions.
 - As a user i would like to be able to register and login seemlessly.
 - As a user i would like to be able to create, edit/update and delete my own "Geordie Slang" terms and phrases.
+- As a user i would like to be able to search the dictionary for specific words incase the dictionary grows to a large size so i can find a word faster.
 
 
 #### Owner:
@@ -414,8 +415,3 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 ### Media
 
 - The only image for this project were taken from [Pexels](https://https://www.pexels.com/)
-
-
-
-
- 
