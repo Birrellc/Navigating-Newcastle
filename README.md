@@ -238,7 +238,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ## Security
 
-- URL hijacking security is handled by a [Login Decorator](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/). With this feature I am able to force users whos session cookie does not match the user's profile to be redirected to the login page instead of to the other user's page.
+- URL hijacking security is handled by a [Login Decorator](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/). With this feature I am able to force users who are not logged in and try access a users page to be returned to the login screen.
 
 - Form Validation from [WTForms](https://pypi.org/project/WTForms/) is also in place to help with basic form security by prevention of using an initial white space and also validating data correctly to help ensure the information submited is correct.
 
@@ -288,7 +288,6 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Youtube](https://www.w3schools.com/) - Used as a general resource for help with code.
 - [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
 - [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
-- [Grammarly(unofficial)](https://marketplace.visualstudio.com/items?itemName=znck.grammarly) - A plugin for VSCode which I used to check the grammar and spelling for my README.md & testing.md docs.
 - [BrowserStack](https://www.browserstack.com) - Used to test my website with the Safari browser.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check accessabilty and SEO scores for the website.
 - [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
