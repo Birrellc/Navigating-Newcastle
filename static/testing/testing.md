@@ -40,12 +40,45 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - I ran through all 3 of my .py files: app.py, forms.py and decorators.py of which i recieved no errors for any of them as show below.
 
 #### app.py
+
 ![app.py VALIDATION TEST](../testing/test-images/app-test-img.png)
 
 #### forms.py
+
 ![forms.py VALIDATION TEST](../testing/test-images/forms-test-img.png)
 
 #### decorators.py
+
 ![decorators VALIDATION TEST](../testing/test-images/decorators-test-img.png)
+
+---
+
+## Responsive Testing
+
+- I used 3 different methods for my responsive testing which were: [DevTools](https://developer.chrome.com/docs/devtools/), [Am I Responsive](http://ami.responsivedesign.is/) & [Responsivley App](https://responsively.app/)
+- First off throughout the project i used [DevTools](https://developer.chrome.com/docs/devtools/) to keep an eye out for any responsive errors and continued throughout the whole development process.
+- Nearing to the end of the process i used [Am I Responsive](http://ami.responsivedesign.is/) to create the snapshot below showing how the project looks on various devices.
+
+#### Am I Responsive
+
+![Am I Responsive](../testing/test-images/nn-amiresponsive.png)
+
+- After using Am i Responsive i decided to use [Responsivley App](https://responsively.app/) to view my website with multiple device sizes at once where i noticed an issue where there was a spacing below my footer when using that app but when i looked at the same resolutions in devtools i found no spacing so decided to leave it here. Example shown below
+
+#### Responsively
+
+![Am I Responsive](../testing/test-images/responsively.gif)
+
+Full list of tested resolutions with [DevTools](https://developer.chrome.com/docs/devtools/) & [Responsivley App](https://responsively.app/):
+
+1. iPhone 5/5se 320px
+2. iPhone X 375px
+3. Pixel 2 411px
+4. iPhone 6/7/8 Plus 414px
+5. Ipad 768px
+6. Nexus 10 800px
+7. Generic Laptop 1280px
+8. MacBook Air 1440px
+9. Desktop 1920px
 
 ---
