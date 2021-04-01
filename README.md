@@ -377,7 +377,7 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 - Alternatively you can connect your Heroku app to your GitHub repository for the project by clicking the connect to GitHub as your deployment method in your Heroku deploy settings.
 - Next head over to reveal cvars in your Heroku settings and create the key value pairs for:
 
-```
+
 | Key            | Value                      | 
 | ---------------|----------------------------|
 | IP             | 0.0.0.0                    |
@@ -392,6 +392,20 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 ---
 
 ## Credits
+
+- First Credits go to my mentor [Felipe Alarcon](https://github.com/fandressouza) for guidance and advice on how to get this project ready for submission and also for the emphasis on security.
+- Code institute for providing the content and support to help learn and develop my skills.
+- Code Institute slack community members for all the contributions they make to the platform.
+- [Michael Herman - Youtube](https://www.youtube.com/watch?v=WCpNvteLCDI) - For ideas to use login decorators.
+- [Corey Schafer - Youtube](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) - The Flask course on this Youtube Channel helped greatly with my project overall
+- [Login Decorators](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/) - The code was taken from the documentation after getting the idea from the link above.
+- [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) & [100 days of Python Code](https://www.udemy.com/course/100-days-of-code/learn/lecture/22372310?start=0#notes)  - Without the documentation resource and one of the lessons in this course I wouldn't have been able to set up the forums the way I would have wanted.
+- [Code Institute](https://codeinstitute.net/) - Alot of this project comes from the course material provided by Code Institute.
+- [Markdown Colors](https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file/41247934#41247934) - Thanks to this post i was able to add color to my Readme.md file.
+
+### Media
+
+- The only image for this project were taken from [Pexels](https://https://www.pexels.com/)
 
 
 
