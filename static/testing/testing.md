@@ -16,7 +16,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Logged In
 
-![picture](../testing/test-images/us-loggedin-desktop.gif)
+![picture](../testing/test-images/us-loggedin-desktop-test.gif)
 
 #### Mobile View
 
