@@ -12,15 +12,15 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Logged Out
 
-![picture](../images/testing-images/us-loggedout-desktop-test.gif)
+![picture](../testing/test-images/us-loggedout-desktop-test.gif)
 
 #### Logged In
 
-![picture](../images/testing-images/us-loggedin-desktop.gif)
+![picture](../testing/test-images/us-loggedin-desktop.gif)
 
 #### Mobile View
 
-![picture](../images/testing-images/us-mobile-nav-test.gif)
+![picture](../testing/test-images/us-mobile-nav-test.gif)
 
 - The user will be able to easily navigate through the website with the links and shown in the clips above.
 - To do this the user just needs to look towards to navigation links in the top right for desktop version and click the hamburger icon to pull out the sidenav in the mobile version.
@@ -31,7 +31,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### After Logging In / Signing Up:
 
-![picture](../images/testing-images/us-dictionary-test.gif)
+![picture](../testing/test-images/us-dictionary-test.gif)
 
 - The user will be able to see the words/terms on the website by first navigating to signup if they do not yet have an account, if they do then they must proceed to login.
 - Next the user should go to the Navigation bar and click on Dictionary to be taken to the page where all words in the dictionary will be displayed in collapsible fields that the user can click on and see the definition of the word plus an example.
@@ -40,7 +40,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 - **As a user i would like to be able to contact the owner of the website with any issues or suggestions.**
 
-![picture](../images/testing-images/us-contact-test.png)
+![picture](../testing/test-images/us-contact-test.png)
 
 - The user will be able to contact the site owner by clicking on either the mail icon or email address in the footer displayed sitewide.
 - The user could also copy and paste the email into their email if they preferred.
@@ -52,11 +52,11 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Sign Up
 
-![picture](../images/testing-images/us-signup-test.gif)
+![picture](../testing/test-images/us-signup-test.gif)
 
 #### Login
 
-![picture](../images/testing-images/us-login-test.gif)
+![picture](../testing/test-images/us-login-test.gif)
 
 - The user can Login or Register to the website as easy as show in the videos above.
 - The user must navigate to either the Sign Up page or the Login Page depending if they have an account or not.
@@ -74,7 +74,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Create
 
-![picture](../images/testing-images/us-addword-test.gif)
+![picture](../testing/test-images/us-addword-test.gif)
 
 - For creating a word:
 
@@ -88,7 +88,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Update
 
-![picture](../images/testing-images/us-update-test.gif)
+![picture](../testing/test-images/us-update-test.gif)
 
 - For Updating a word:
 
@@ -103,7 +103,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 #### Delete
 
-![picture](../images/testing-images/us-delete-test.gif)
+![picture](../testing/test-images/us-delete-test.gif)
 
 - For Deleting a word:
 
@@ -119,7 +119,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 - **As a user i would like to be able to search the dictionary for specific words incase the dictionary grows to a large size so i can find a word faster.**
 
-![picture](../images/testing-images/us-search-test.gif)
+![picture](../testing/test-images/us-search-test.gif)
 
 - For Searching a word:
 
