@@ -2,7 +2,7 @@ import os
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
-from functools import wraps
+from decorators import user_logged_in, logged_in_required
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -20,36 +20,19 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 users = mongo.db.user
-
-
-# Login decorators
-
-
-def user_logged_in():
-    if session.get('user') is None:
-        return False
-    return True
-
-
-def logged_in_required(func):
-    @wraps(func)
-    def route(*args, **kwargs):
-        if user_logged_in():
-            return func(*args, **kwargs)
-        flash("You need to be logged in to view that!")
-        return redirect(url_for("login"))
-    return route
+dict = mongo.db.dictionary
 
 
 # Routes
 
-
+# Home Route
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template('index.html')
 
 
+# Login Route
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
@@ -68,6 +51,7 @@ def login():
     return render_template("login.html", form=form)
 
 
+# Signup Route
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = RegistrationForm()
@@ -95,19 +79,30 @@ def signup():
     return render_template("signup.html", form=form)
 
 
+# Logout Route
+@app.route("/logout")
+@logged_in_required
+def logout():
+    flash("You have been logged out!", "logged_out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
+# Dictionary Route
 @app.route("/dictionary")
 def dictionary():
     form = SearchForm()
-    dictionary = list(mongo.db.dictionary.find())
+    dictionary = list(dict.find())
     return render_template("dictionary.html", dictionary=dictionary, form=form)
 
 
+# Profile Route
 @app.route("/profile/<username>", methods=["GET", "POST"])
 @logged_in_required
 def profile(username):
     username = users.find_one(
         {"username": session["user"]})['username']
-    dictionary = list(mongo.db.dictionary.find())
+    dictionary = list(dict.find())
 
     if session["user"]:
         return render_template(
@@ -117,12 +112,13 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Add Word Route
 @app.route("/add_word", methods=["GET", "POST"])
 @logged_in_required
 def add_word():
     form = DictionaryForm()
     if form.validate_on_submit() and request.method == "POST":
-        existing_word = mongo.db.dictionary.find_one(
+        existing_word = dict.find_one(
             {"word": form.word.data})
 
         if existing_word:
@@ -134,19 +130,20 @@ def add_word():
             "example": form.example.data.capitalize(),
             "added_by": session["user"]
         }
-        mongo.db.dictionary.insert_one(words)
+        dict.insert_one(words)
         flash("Your word is now in the dictionary", "word_added")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("add_word.html", form=form)
 
 
+# Update Word Route
 @app.route("/update_word/<word_id>", methods=["GET", "POST"])
 @logged_in_required
 def update_word(word_id):
     form = UpdateWordForm()
-    word = mongo.db.dictionary.find_one({"_id": ObjectId(word_id)})
-    dictionaries = mongo.db.dictionary.find().sort("word", 1)
+    word = dict.find_one({"_id": ObjectId(word_id)})
+    dictionaries = dict.find().sort("word", 1)
     if form.validate_on_submit() and request.method == "POST":
         update = {
             "word": form.word.data.capitalize(),
@@ -154,55 +151,50 @@ def update_word(word_id):
             "example": form.example.data.capitalize(),
             "added_by": session["user"]
         }
-        mongo.db.dictionary.update({"_id": ObjectId(word_id)}, update)
+        dict.update({"_id": ObjectId(word_id)}, update)
         flash("Your word is now in the dictionary", "updated_word")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("update_word.html", form=form, word=word,
                            dictionaries=dictionaries)
 
 
+# Delete Word Route
 @app.route("/delete_word/<word_id>")
 @logged_in_required
 def delete_word(word_id):
-    mongo.db.dictionary.remove({"_id": ObjectId(word_id)})
+    dict.remove({"_id": ObjectId(word_id)})
     flash("Your word has been deleted", "deleted_word")
     return redirect(url_for("profile", username=session["user"]))
 
 
-@app.route("/logout")
-@logged_in_required
-def logout():
-    flash("You have been logged out!", "logged_out")
-    session.pop("user")
-    return redirect(url_for("login"))
-
-
-@ app.route("/contact")
-def contact():
-    return render_template('contact.html')
-
-
+# Search Route
 @ app.route("/search", methods=["GET", "POST"])
 def search():
     form = SearchForm()
     if form.validate_on_submit() and request.method == "POST":
         query = form.word.data
         print(query)
-        words = list(mongo.db.dictionary.find({"$text": {"$search": query}}))
+        words = list(dict.find({"$text": {"$search": query}}))
         return render_template("dictionary.html", dictionary=words,
                                form=form, query=query)
 
 
+# Error Handlers
+
+
+# This error handler is a backup incase Login Decorator ever stops working
 @app.errorhandler(403)
 def page_forbidden(e):
     return render_template("403.html"), 403
 
 
+# Renders a page not found error page
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
 
 
+# Renders an internal server error page
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template("500.html"), 500

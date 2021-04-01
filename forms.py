@@ -20,7 +20,7 @@ class LoginForm(FlaskForm):
     username = StringField('Username:',
                            validators=[DataRequired(message="Please enter a username"), Length(min=3, max=12,
                                                                                                message="Please enter a username between 3 and 12 characters long"), Regexp(regex_key,
-                                                                                                                                                                           message="Username not start or end with a space"")])
+                                                                                                                                                                           message="Username not start or end with a space")])
     password = PasswordField('Password:', [DataRequired(),
                                           Length(min=8, message="Password must be atleast 8 letters long")])
     submit = SubmitField('Login')
