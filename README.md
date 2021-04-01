@@ -309,11 +309,11 @@ Testing has is logged in its own document
 
 ---
 
-### Deployment
+## Deployment
 
 This project contains mongodb for storage and is deployed on https://www.heroku.com/
 
-## Prerequisites
+### Prerequisites
 
 In order to deploy the application please ensure that the requirements below are met and installed:
 
@@ -322,21 +322,21 @@ In order to deploy the application please ensure that the requirements below are
 [Git](https://git-scm.com/downloads)
 [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-## Cloning from GitHub
+### Cloning from GitHub
 
 - Head over to the repository location here(insert link later)
 - Click the 'code' button and download the zip file from the repository or alternatively you can clone the repository by using the following url in your terminal with the commands:
 
 ``` git clone https:/github.com/BirrellC/navigating-newcastle.git ```
 
-## IDE
+### IDE
 
 - Open the application in your IDE.
 - In your IDE terminal with the Application folder open type
 ``` python -m pip -r requirements.txt ```
 - This will install the required modules for the application
 
-## MongoDB
+### MongoDB
 
 - Head over to your MongoDB account and create a new project called "navigating newcastle"
 - From there create two collections "dictionary" and "user" which contain the keys listed in the database section above
@@ -355,7 +355,7 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 - Next return to MongoDB and click connect on your database, from there click connect your application and copy and paste the link and replace "YOUR_MONGO_URI" in your env.py file.
 - Replace the password with your password for your MongoDB database and the database name.
 
-## Heroku
+### Heroku
 
 - First ensure a "Procfile" is created and your requirements.txt is up to date, do this by using the following commands:
 ``` pip3 freeze --local > requirements.txt ```
@@ -374,8 +374,6 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 
 ``` heroku ps:scale web=5 ```
 
-###
-
 - Alternatively you can connect your Heroku app to your GitHub repository for the project by clicking the connect to GitHub as your deployment method in your Heroku deploy settings.
 - Next head over to reveal cvars in your Heroku settings and create the key value pairs for:
 
@@ -390,6 +388,10 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 
 - Next head over to Heroku deploy section and click "Deploy Now" in the manual section and after that you can also enable automatic deploy also.
 - The project should now be deployed to Heroku and can be accessed by clicking "Open App".
+
+---
+
+## Credits
 
 
 
