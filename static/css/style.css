@@ -144,6 +144,10 @@ i.fa-envelope {
   font-size: 1.5rem;
 }
 
+.cta-text {
+  font-style:italic;
+}
+
 /* Dictionary.html */
 
 .dictionary-subheader {
