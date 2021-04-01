@@ -39,8 +39,13 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - For Python testing I ran my code through [Extends Class Python Tester](https://extendsclass.com/python-tester.html).
 - I ran through all 3 of my .py files: app.py, forms.py and decorators.py of which i recieved no errors for any of them as show below.
 
+#### app.py
 ![app.py VALIDATION TEST](../testing/test-images/app-test-img.png)
+
+#### forms.py
 ![forms.py VALIDATION TEST](../testing/test-images/forms-test-img.png)
+
+#### decorators.py
 ![decorators VALIDATION TEST](../testing/test-images/decorators-test-img.png)
 
 ---
