@@ -180,9 +180,21 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 #### Color Scheme
 
-- My color scheme came from the random color pannels generator on [coolors](https://coolors.co/)
+- My color scheme came from the random color pannels generator on [Coolors](https://coolors.co/) later in the project i was unhappy with the original color scheme and chose to generate another random color scheme.
 
-![picture](static/images/nn-colours.png.png)
+![picture](static/images/nncolors.png)
+
+![#CB997E](https://via.placeholder.com/15/CB997E/CB997E) - Nav, Footer & Collapsible Header.
+
+![#DDBEA9](https://via.placeholder.com/15/DDBEA9/DDBEA9) - Card Color.
+
+![#FFE8D6](https://via.placeholder.com/15/FFE8D6/FFE8D6) - Body Background & Sidenav Background Color.
+
+![#83C5BE](https://via.placeholder.com/15/83C5BE/83C5BE) - Button Color.
+
+![#B7B7A4](https://via.placeholder.com/15/B7B7A4/B7B7A4) - Collapsible Body Color.
+
+![#142424](https://via.placeholder.com/15/142424/142424) - Sidenav Links, Font Awesome Icons And Links For Signup And Login Text.
 
 #### Font
 
