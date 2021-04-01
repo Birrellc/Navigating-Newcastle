@@ -316,6 +316,10 @@ Testing has is logged in its own document [HERE](https://github.com/Birrellc/Nav
 
 During this project I was met with a few barriers which i was able to breakdown and overcome with the help of documentation, Youtube videos, StackOverlow and Code Institute course material but the was one major area that i was not able to overcome as quickly as i liked which was the use of Flask-login which is why i switched to a Login Decorator security feature instead. Later after making my Login Decorator security i was able to get a grasp on how Flask-Login worked but chose to leave my Login Decorator security feature inplace instead while leaving the security to be adapted to Flask-Login and even more secure features at a later date when i revist this project in the future.
 
+### Known Bugs
+
+While doing my tests for update_word.html I found that if I update my own word for example 'test' to 'test1' test will be replaced and no longer exist but if another user created test1 before i updated test to test1 there would then be 2 test1's in the dictionary.
+
 ---
 
 ## Deployment
