@@ -454,29 +454,3 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 - Search Bar Validation Rules:
 
 1. Word being searched cannot start or end with a whitespace.
-
-
-### Error pages (403.html, 404.html 500.Html)
-
-#### 403
-
-- This is a forbidden page inplace incase it is ever needed in future development as currently i'm using login decorators instead.
-
-Navigated to [/403.html](http://navigating-newcastle.herokuapp.com/403.html) which correctly loaded the page.
-Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
-
-#### 404
-
-- This is a does not exist page used for whenever a user tries to navigate to a page on the website that doesnt exist.
-
-1. Navigated to [/404.html](http://navigating-newcastle.herokuapp.com/404.html) which correctly loaded the page.
-2. Navigated to [http://navigating-newcastle.herokuapp.com/NotaRealPage.html](http://navigating-newcastle.herokuapp.com/404.html) and was redirected to the 404.html error page instead as expected.
-3. Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
-
-
-#### 500
-
-- This is an Internal Server Error page used incase the web app every overloads or fails.
-
-1. Navigated to [/500.html](http://navigating-newcastle.herokuapp.com/500.html) and was redirected to the 500.html error page.
-2. Next i clicked the 'Return Home' button which worked as expected and took me back to the homepage.
