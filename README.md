@@ -48,7 +48,7 @@ An online website on "Geordie" dialect which is a rather well known accent widel
 - [Testing](#Testing)
 - [Project Barriers](#Project-Barriers)
   - [Known Bugs](#Known-Bugs)
-- [Known Bugs](#Known-Bugs)
+- [Deployment](#Deployment)
   - [Prerequisites](#Prerequisites)
   - [Cloning from GitHub](#Cloning-from-GitHub)
   - [IDE](#IDE)
