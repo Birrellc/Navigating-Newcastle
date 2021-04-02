@@ -24,6 +24,7 @@
   </head>
   <body>
     <header>
+
       <!-- Main Navbar -->
 
       <nav class="navbar nav-extended">
@@ -34,7 +35,7 @@
             data-target="mobile-demo"
             class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
-            ></a>
+          ></a>
           <ul class="text-shadow right nav-links hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">HOME</a></li>
             {% if session.user %}
@@ -75,7 +76,7 @@
     <!-- Page Container is used to wrap my main content and my footer together so that my footer always stays at the bottom of the page regardless of how much dynamic content is added -->
 
     <div class="page-container">
-
+      
       <!-- Main Content -->
 
       <section class="main container-fluid">
@@ -91,18 +92,21 @@
               <a
                 href="https://www.instagram.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-link"
                 ><i class="fab fa-instagram"></i
               ></a>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-link"
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
                 href="https://www.twitter.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-link"
                 ><i class="fab fa-twitter"></i
               ></a>
@@ -123,7 +127,10 @@
             <div class="col s12">
               <div class="copyright">
                 <div class="center-align container">
-                  <a href="https://github.com/BirrellC" target="_blank"
+                  <a
+                    href="https://github.com/BirrellC"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     >&copy; Chris Birrell 2021 <i class="fab fa-github"></i
                   ></a>
                 </div>
