@@ -24,7 +24,8 @@
   </head>
   <body>
     <header>
-      <!-- top navbar -->
+      <!-- Main Navbar -->
+
       <nav class="navbar nav-extended">
         <div class="nav-wrapper">
           <a href="{{ url_for('home') }}" class="brand-logo text-shadow">NN</a>
@@ -52,7 +53,7 @@
         </div>
       </nav>
 
-      <!-- mobile sidenav -->
+      <!-- Mobile Sidenav -->
 
       <ul class="sidenav center-align" id="mobile-demo">
         <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -70,10 +71,18 @@
         {% endif %}
       </ul>
     </header>
+
+    <!-- Page Container is used to wrap my main content and my footer together so that my footer always stays at the bottom of the page regardless of how much dynamic content is added -->
+
     <div class="page-container">
+
+      <!-- Main Content -->
+
       <section class="main container-fluid">
         {% block content %} {% endblock %}
       </section>
+
+      <!-- Footer -->
 
       <footer class="footer">
         <div class="container center-align">

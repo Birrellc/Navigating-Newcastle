@@ -8,6 +8,10 @@
       <div class="row">
         <div class="col s12">
           <div class="center-align">
+
+            <!-- Area for flash error messages to display -->
+            <!--Credit https://www.youtube.com/watch?v=wQXSDwCgXIQ -->
+
             {% with messages = get_flashed_messages(with_categories=true) %} {%
             if messages %} {% for category, message in messages %} {% if
             category == "user_exists" %}
@@ -21,33 +25,61 @@
       <div class="container center-align">
         <div class="row">
           <div class="col s12">
+
+            <!-- Form Created with WTforms -->
+
             <form
               class="card-panel"
               method="POST"
               action="{{ url_for('signup') }}"
             >
+
+              <!-- CSRF Token for Security -->
+
               {{ form.hidden_tag() }}
               <div class="row">
                 <div class="form-group col s12">
-                  {{ form.username.label(class_="form-text") }} {{ form.username
-                  }} {% for error in form.username.errors %}
+
+                  <!-- Username Field -->
+
+                  {{ form.username.label(class_="form-text") }} {{
+                  form.username}}
+
+                  <!-- Display Errors for Username Field -->
+
+                  {% for error in form.username.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col s12">
-                  {{ form.password.label(class_="form-text") }} {{ form.password
-                  }} {% for error in form.password.errors %}
+
+                  <!-- Password Field -->
+
+                  {{ form.password.label(class_="form-text") }} {{
+                  form.password}}
+
+                  <!-- Display Errors for Password Field -->
+
+                  {% for error in form.password.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
               <div class="row">
-                <div class="col s12 form-group">{{form.submit(class_="btn")}}</div>
+                <div class="col s12 form-group">
+
+                  <!-- Submit Button -->
+
+                  {{form.submit(class_="btn")}}
+                </div>
               </div>
             </form>
             <div>
+
+                  <!-- Take Users to Login Page if They Already Have an Account -->
+
               <p class="login-link">
                 Already have an account?
                 <a href="{{ url_for('login') }}">LOGIN</a>

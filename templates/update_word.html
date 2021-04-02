@@ -8,37 +8,69 @@
       <div class="container center-align">
         <div class="row">
           <div class="col s12">
+            
+            <!-- Form Created with WTforms -->
+
             <form
               class="card-panel"
               method="POST"
               action="{{ url_for('update_word', word_id=word._id) }}"
             >
+
+              <!-- CSRF Token for Security -->
+
               {{ form.hidden_tag() }}
               <div class="row">
                 <div class="form-group col s12">
-                  {{ form.word.label(class_="form-text") }} {{ form.word }} {%
-                  for error in form.word.errors %}
+
+                  <!-- Word Field -->
+
+                  {{ form.word.label(class_="form-text") }} {{ form.word }}
+
+                  <!-- Display Errors for Word Field -->
+
+                  {%for error in form.word.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col s12">
-                  {{ form.definition.label(class_="form-text") }} {{
-                  form.definition }} {% for error in form.definition.errors %}
+
+                  <!-- Definition Field -->
+
+                  {{ form.definition.label(class_="form-text") }}
+                  {{form.definition }}
+
+                  <!-- Display Errors for Definiton Field -->
+
+                  {% for error in form.definition.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col s12">
-                  {{ form.example.label(class_="form-text") }} {{ form.example
-                  }} {% for error in form.example.errors %}
+
+                  <!-- Example Field -->
+
+                  {{ form.example.label(class_="form-text") }} {{ form.example}}
+
+                  <!-- Display Errors for Example Field -->
+
+                  {% for error in form.example.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
-              <div class="row">{{ form.submit(class_="btn") }}</div>
+              <div class="row">
+                <div class="col s12">
+
+                  <!--Submit Button-->
+
+                  {{ form.submit(class_="btn") }}
+                </div>
+              </div>
             </form>
           </div>
         </div>

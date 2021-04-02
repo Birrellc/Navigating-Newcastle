@@ -13,6 +13,7 @@
       <div class="row">
         <div class="col s12">
           <!--Add Word Button-->
+
           <div class="center-align add-word">
             <a href="{{ url_for('add_word') }}" class="btn add-word-btn">
               Add Word
@@ -22,6 +23,10 @@
       </div>
       <div class="row">
         <div class="col s12">
+
+          <!-- Area for flash error messages to display -->
+          <!--Credit https://www.youtube.com/watch?v=wQXSDwCgXIQ -->
+
           {% with messages = get_flashed_messages(with_categories=true) %} {% if
           messages %} {% for category, message in messages %} {% if category ==
           "word_added" %}
@@ -44,6 +49,8 @@
         </div>
       </div>
 
+      <!-- Dictionary of User's Own Words Where They Can Update or Delete Them -->
+
       <div class="container">
         <div class="row">
           <div class="col s12">
@@ -61,13 +68,17 @@
                 </div>
               </li>
               <div class="profile-btn">
+                
                 <!--Update Button-->
+
                 <a
                   href="{{ url_for('update_word', word_id=word._id) }}"
                   class="btn-small btn"
                   >Update</a
                 >
+
                 <!--Delete Button-->
+
                 <a
                   href="{{ url_for('delete_word', word_id=word._id) }}"
                   class="btn-small btn"

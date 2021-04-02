@@ -8,32 +8,54 @@
           Don't forget to add your own via your profile page!
         </p>
       </div>
+
+      <!-- Search Feature -->
+
       <div class="container search-container center-align">
         <div class="row">
           <div class="col s12">
+            <!-- Form Created with WTforms -->
+
             <form
               class="card-panel"
               action="{{ url_for('search') }}"
               method="POST"
             >
+              <!-- CSRF Token for Security -->
+
               {{ form.hidden_tag() }}
+
               <div class="row">
                 <div class="form-group search-form col s12">
                   <i class="fas fa-search"></i>
-                  {{ form.word.label(class_="form-text") }} {{ form.word }} {%
-                  for error in form.word.errors %}
+
+                  <!-- Word Field -->
+
+                  {{ form.word.label(class_="form-text") }} {{ form.word }}
+
+                  <!-- Display Errors for Word Field (no validation in place for search field so shouldnt need to return an error but placed here for future validation implementations)-->
+
+                  {%for error in form.word.errors %}
                   <span class="error-text"> {{error}} </span>
                   {% endfor %}
                 </div>
               </div>
               <div>
+                <!-- Search Button -->
+
                 {{ form.submit(class_="btn") }}
+
+                <!-- Reset Search Button (reloads page)-->
+
                 <a href="{{ url_for('dictionary') }}" class="btn">Reset</a>
               </div>
             </form>
           </div>
         </div>
       </div>
+
+      <!-- Dictionary -->
+
       <div class="container">
         <div class="row">
           <div class="col s12">
@@ -50,15 +72,22 @@
                   <p><span>Added By: </span>{{ word.added_by }}</p>
                 </div>
               </li>
+
+              <!-- If user is logged in as admin they can delete and update other peoples words on this page -->
+
               {% if session.user == "admin" %}
+
               <!-- Update Button -->
+
               <div class="profile-btn">
                 <a
                   href="{{ url_for('update_word', word_id=word._id) }}"
                   class="btn-small btn"
                   >Update</a
                 >
+
                 <!-- Delete Button-->
+                
                 <a
                   href="{{ url_for('delete_word', word_id=word._id) }}"
                   class="btn-small btn"
