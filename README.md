@@ -248,8 +248,8 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ### Website Features
 
-- 7 page website overall with add_word, update_word included.
-- 3 User Interactive Forms With Validation.
+- 7 page website overall with add_word, update_word included but not including error pages.
+- Interactive Forms With Validation.
 - Account Registration & Login Features.
 - Interactive dictionary application.
 - CRUD options to create, read, update and delete words for all registered users.
@@ -257,7 +257,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - Social media icons will be present on all pages.
 - Error pages to help any users if there are any errors.
 - Form validation for form security.
-- Login decorators to help to stop URL hijacking of other users profile pages.
+- Login decorators to help to stop URL hijacking of profile pages when not logged in.
 
 
 ### Features to be Implemented in the Future
