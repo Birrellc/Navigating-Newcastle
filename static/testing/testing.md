@@ -4,9 +4,37 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
+## Table of Contents
+
+- [User Story Testing](#USER-STORY-TESTING)
+  - [User Story 1](#User-Story-1)
+  - [User Story 2](#User-Story-2)
+  - [User Story 3](#User-Story-3)
+  - [User Story 3](#User-Story-4)
+  - [User Story 3](#User-Story-5)
+  - [User Story 3](#User-Story-6)
+- [Validation Testing](#Validation-Testing)
+  - [HTML](#HTML)
+  - [CSS](#CSS)
+  - [JS](#JavaScript)
+  - [Python](#Python)
+- [Responsive Testing](#Responsive-Testing)
+- [Manual Testing](#Manual-Testing)
+  - [Nav](#NAV)
+  - [Footer](#NAV)
+  - [Home (index.html)](#HOME-(index.html))
+  - [Sign Up (signup.html)](#SIGN-UP-(signup.html))
+  - [Login (login.html)](#Login-(login.html))
+  - [Add Word (add_word.html)](#Add-Word-(add_word.html))
+  - [Update Word (update_word.html)](#Update-Word-(update_word.html))
+  - [Profile (profile.html)](#Profile-(profile.html))
+  - [Dictionary (dictionary.html)](#Dictionary-(dictionary.html))
+
+---
+
 ## USER STORY TESTING
 
-### User Story #1
+### User Story 1
 
 - **As a user i would like to be able to navigate through the website quickly and clearly.**
 
@@ -25,7 +53,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - The user will be able to easily navigate through the website with the links and shown in the clips above.
 - To do this the user just needs to look towards to navigation links in the top right for desktop version and click the hamburger icon to pull out the sidenav in the mobile version.
 
-### User Story #2
+### User Story 2
 
 - **As a user i would like to be able to see "Geordie Slang" words**
 
@@ -36,7 +64,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - The user will be able to see the words/terms on the website by first navigating to signup if they do not yet have an account, if they do then they must proceed to login.
 - Next the user should go to the Navigation bar and click on Dictionary to be taken to the page where all words in the dictionary will be displayed in collapsible fields that the user can click on and see the definition of the word plus an example.
 
-### User Story #3
+### User Story 3
 
 - **As a user i would like to be able to contact the owner of the website with any issues or suggestions.**
 
@@ -46,7 +74,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - The user could also copy and paste the email into their email if they preferred.
 - I chose not to create a dedicated contact page for this project due to it being more Python CRUD focused and also felt a dictionary application doesn't really need a dedicated contact page.
 
-### User Story #4
+### User Story 4
 
 - **As a user i would like to be able to register and login seemlessly.**
 
@@ -68,7 +96,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 (I play to make this more secure in the future)
 
-### User Story #5
+### User Story 5
 
 - **As a user i would like to be able to create, edit/update and delete my own "Geordie Slang" terms and phrases.**
 
@@ -115,7 +143,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 - After completing this your word will be removed from your profile page and the website dictionary.
 
-### User Story #6
+### User Story 6
 
 - **As a user i would like to be able to search the dictionary for specific words incase the dictionary grows to a large size so i can find a word faster.**
 
@@ -131,7 +159,11 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
-## HTML
+## Validation Testing
+
+Validation testing for HTML, CSS, JS & Python:
+
+### HTML
 
 - For HTML testing I ran my code through [W3C HTML Validator](https://validator.w3.org) by URI validation using my [Deployed Live Site](https://validator.w3.org).
 - I received no errors for my HTML as shown in the Image below.
@@ -141,7 +173,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
-## CSS
+### CSS
 
 - For CSS testing i first [Auto Prefixer CSS](https://autoprefixer.github.io) to make sure my CSS has all the correct vendor prefixes.
 - The commit showing these changes being implemented can be found [Here](https://github.com/Birrellc/Navigating-Newcastle/commit/fc256d091fc00856bba4dce0a80f9b0ad88e076a)
@@ -152,7 +184,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
-## jQuery / JavaScript
+### JavaScript
 
 - Due to my project being more focused on creating a CRUD application I found I did not need to use as much JavaScript for this process to chose to keep it to a minimum to allow more time to focus on the core concepts of the project.
 - For JavaScript validation I ran my code through [JsHint](https://jshint.com/) and recieved no errors or warnings as show in the image below.
@@ -161,7 +193,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
-## Python
+### Python
 
 - For Python testing I ran my code through [Extends Class Python Tester](https://extendsclass.com/python-tester.html).
 - I ran through all 3 of my .py files: app.py, forms.py and decorators.py of which i recieved no errors for any of them as show below.
