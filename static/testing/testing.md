@@ -91,7 +91,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 - The Validation for Creating an account is as follows:
 
 1. Username must be between 3 and 12 characters long.
-2. Username's cannot start or end with a 'space'.
+2. Username's cannot start with a 'space'.
 3. Passwords must be over 8 characters.
 
 (I play to make this more secure in the future)
@@ -306,10 +306,10 @@ Entered 'Test05' as username and 'password' as password then clicked Sign Up But
 - Validation Rules
 
 1. Username must be between 3-12 characters.
-2. Username must not start or end with Whitespace.
+2. Username must not start with Whitespace.
 3. Username Data is required.
 4. Password must be 8 characters minimum.
-5. Password must not start or end with Whitespace.
+5. Password must not start with Whitespace.
 6. Password Data is required.
 7. Username is not case sensitive for example testuser is the same as TESTUSER or TestUser.
 8. Username cannot already exist.
@@ -321,12 +321,11 @@ Entered 'Test05' as username and 'password' as password then clicked Sign Up But
 3. Tried to sign up as TE and the signup failed with the correct error message.
 4. Tried to sign up as test12345678912345 and the signup failed with the correct error message.
 5. Tried to sign up as test06 but with a whitespace at the start and the signup failed with the correct error message.
-6. Tried to sign up as test06 but with a whitespace at the end and the signup failed with the correct error message.
-7. Tried to sign up as test06 with the password 'pass' and the signup failed again with the correct error message.
-8. Tried to sign up as test06 with the password 'password' but with a whitepace at the start signup failed again with the correct error message after changes.
-9. Tried to sign up as test06 with the password 'password' but with a whitespace at the end signup failed again with the correct error message after changes.
-10. Tried to sign up with no username and was unable to.
-11. Tried to sign up with no password and was unable to.
+6. Tried to sign up as test06 with the password 'pass' and the signup failed again with the correct error message.
+7. Tried to sign up as test06 with the password 'password' but with a whitepace at the start signup failed again with the correct error message after changes.
+8. Tried to sign up as test06 with the password 'password' but with a whitespace at the end signup failed again with the correct error message after changes.
+9. Tried to sign up with no username and was unable to.
+10. Tried to sign up with no password and was unable to.
 
 - Validation Test Notes:
 
@@ -346,10 +345,10 @@ Entered 'Test05' as username and 'password' as password then clicked Login butto
 - Validation Rules
 
 1. Username must be between 3-12 characters.
-2. Username must not start or end with Whitespace.
+2. Username must not start with Whitespace.
 3. Username Data is required.
 4. Password must be 8 characters minimum.
-5. Password must not start or end with Whitespace.
+5. Password must not start with Whitespace.
 6. Password Data is required.
 7. Username is not case sensitive for example testuser is the same as TESTUSER or TestUser.
 
@@ -358,10 +357,9 @@ Entered 'Test05' as username and 'password' as password then clicked Login butto
 1. Tried to login as Test05 with an incorrect password and login failed with the correct error message.
 2. Tried to login as TEST05 and the login was successful as Login is not case sensitive.
 3. Tried to login as Test20 which doesnt exist and login failed with tthe correct error message
-4. Tried to login as Test05 with the correct password apart from a whitespace at the end and the login failed with the correct error message.
-5. Tried to login as Test05 with the correct password apart from a whitespace at the start and the login failed with the correct error message.
-6. Tried to login with no username and was unable to.
-7. Tried to login with no password and was unable to.
+4. Tried to login as Test05 with the correct password apart from a whitespace at the start and the login failed with the correct error message.
+5. Tried to login with no username and was unable to.
+6. Tried to login with no password and was unable to.
 
 - Link:
 
@@ -378,13 +376,13 @@ Typed 'test' in the word field, typed 'test definition' in the definition field,
 - Validation Rules
 
 1. Word must be between 2-15 characters.
-2. Word must not start or end with Whitespace.
+2. Word must not start with Whitespace.
 3. Word Data is required.
 4. Definition must be between 2-25 characters.
-5. Definition must not start or end with Whitespace.
+5. Definition must not start with Whitespace.
 6. Definition Data is required.
 7. Example must be between 2-50 characters.
-8. Example must not start or end with Whitespace.
+8. Example must not start with Whitespace.
 9. Example Data is required.
 10. Words cannot be added if theyre already in the dictionary/database.
 
@@ -400,12 +398,10 @@ Typed 'test' in the word field, typed 'test definition' in the definition field,
 8. Tried to create a 26 letter definition which failed with the correct error message.
 9. Tried to create a 1 letter example which failed with the correct error message.
 10. Tried to create a 51 letter example which failed with the correct error message.
-11. Tried to create a word starting with a white space which failed wit the correct message.
-12. Tried to create a word ending with a white space which failed wit the correct message.
-13. Tried to create a definition starting with a white space which failed wit the correct message.
-14. Tried to create a definition ending with a white space which failed wit the correct message.
-15. Tried to create an example starting with a white space which failed wit the correct message.
-16. Tried to create an example ending with a white space which failed wit the correct message.
+11. Tried to create a word starting with a whitespace which failed wit the correct message.
+12. Tried to create a definition starting with a whitespace which failed wit the correct message.
+13. Tried to create an example starting with a whitespace which failed wit the correct message.
+
 
 
 ### UPDATE WORD (update_word.html)
@@ -417,13 +413,13 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 - Validation Rules
 
 1. Word must be between 2-15 characters.
-2. Word must not start or end with Whitespace.
+2. Word must not start with Whitespace.
 3. Word Data is required.
 4. Definition must be between 2-25 characters.
-5. Definition must not start or end with Whitespace.
+5. Definition must not start with Whitespace.
 6. Definition Data is required.
 7. Example must be between 2-50 characters.
-8. Example must not start or end with Whitespace.
+8. Example must not start with Whitespace.
 9. Example Data is required.
 
 - Validation Test
@@ -438,12 +434,10 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 8. Tried to update a 26 letter definition which failed with the correct error message.
 9. Tried to update a 1 letter example which failed with the correct error message.
 10. Tried to update a 51 letter example which failed with the correct error message.
-11. Tried to update a word starting with a white space which failed wit the correct message.
-12. Tried to update a word ending with a white space which failed wit the correct message.
-13. Tried to update a definition starting with a white space which failed wit the correct message.
-14. Tried to update a definition ending with a white space which failed wit the correct message.
-15. Tried to update an example starting with a white space which failed wit the correct message.
-16. Tried to update an example ending with a white space which failed wit the correct message.
+11. Tried to update a word starting with a whitespace which failed wit the correct message.
+12. Tried to update a definition starting with a whitespace which failed wit the correct message.
+13. Tried to update an example starting with a whitespace which failed wit the correct message.
+
 
 - Validation Notes
 
@@ -482,7 +476,3 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 3. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
 4. Typed 'test' (which was created earlier but will be removed before submission) to the search bar and hit search and the dictionary returned the word test as a collapisible with its definition, example and added by inside correctly.
 5. After displaying only 'test' i clicked the reset button which reloaded the page and displayed the rest of the dictionary again as expected.
-
-- Search Bar Validation Rules:
-
-1. Word being searched cannot start or end with a whitespace.
