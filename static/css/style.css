@@ -242,3 +242,12 @@ i.fa-envelope {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+/* Media Queries */
+
+@media only screen and (min-width: 1400px) {
+  .main-img {
+    height: 80%;
+    width: 80%;
+  }
+}
