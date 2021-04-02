@@ -27,11 +27,14 @@
       <!-- top navbar -->
       <nav class="navbar nav-extended">
         <div class="nav-wrapper">
-          <a href="{{ url_for('home') }}" class="brand-logo">NN</a>
-          <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger right"
+          <a href="{{ url_for('home') }}" class="brand-logo text-shadow">NN</a>
+          <a
+            href="{{ url_for('home') }}"
+            data-target="mobile-demo"
+            class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
           ></a>
-          <ul class="right navigating-nav hide-on-med-and-down">
+          <ul class="text-shadow right navigating-nav hide-on-med-and-down">
             <li><a href="{{ url_for('home') }}">HOME</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('dictionary') }}">DICTIONARY</a></li>
@@ -50,6 +53,7 @@
       </nav>
 
       <!-- mobile sidenav -->
+
       <ul class="sidenav center-align" id="mobile-demo">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         {% if session.user %}
@@ -74,8 +78,7 @@
       <footer class="footer">
         <div class="container center-align">
           <div class="row">
-            <div class="col center-align s12">
-              <h6>Follow Us:</h6>
+            <div class="col s12 text-shadow social-media center-align">
               <a
                 href="https://www.instagram.com"
                 target="_blank"
@@ -94,22 +97,26 @@
                 class="social-link"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <div class="row">
-                <h6>Contact Us:</h6>
-                <a href="mailto:NavNewcastle@MadeUpEmail.com" class="social-link mail">
-                  <i class="fas fa-envelope"></i>
-                  NavNewcastle@MadeUpEmail.com
-                </a>
-              </div>
-              <div class="row">
-                <div class="col s12">
-                  <div class="copyright">
-                    <div class="center-align container">
-                      <a href="https://github.com/BirrellC" target="_blank"
-                        >&copy; Chris Birrell 2021 <i class="fab fa-github"></i></a
-                      >
-                    </div>
-                  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <a
+                href="mailto:NavNewcastle@MadeUpEmail.com"
+                class="social-link mail text-shadow"
+              >
+                <i class="fas fa-envelope"></i>
+                NavNewcastle@MadeUpEmail.com
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="copyright">
+                <div class="center-align container">
+                  <a href="https://github.com/BirrellC" target="_blank"
+                    >&copy; Chris Birrell 2021 <i class="fab fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>

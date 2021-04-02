@@ -3,66 +3,76 @@
   <div class="col s12">
     <div class="card center-align">
       <div class="card-content white-text">
-        <h1 class="main-header">Geordie Dictionary</h1>
-        <p class="dictionary-text">
+        <h1 class="main-header text-shadow">Geordie Dictionary</h1>
+        <p class="dictionary-text text-shadow">
           Don't forget to add your own via your profile page!
         </p>
       </div>
-      <div class="container">
-        <div class="container center-align">
-          <form
-            class="card-panel"
-            action="{{ url_for('search') }}"
-            method="POST"
-          >
-            {{ form.hidden_tag() }}
-            <div class="row">
-              <div class="form-group search-form col s12">
-                <i class="fas fa-search"></i>
-                {{ form.word.label(class_="form-text") }} {{ form.word }} {% for
-                error in form.word.errors %}
-                <span class="error-text"> {{error}} </span>
-                {% endfor %}
+      <div class="container search-container center-align">
+        <div class="row">
+          <div class="col s12">
+            <form
+              class="card-panel"
+              action="{{ url_for('search') }}"
+              method="POST"
+            >
+              {{ form.hidden_tag() }}
+              <div class="row">
+                <div class="form-group search-form col s12">
+                  <i class="fas fa-search"></i>
+                  {{ form.word.label(class_="form-text") }} {{ form.word }} {%
+                  for error in form.word.errors %}
+                  <span class="error-text"> {{error}} </span>
+                  {% endfor %}
+                </div>
               </div>
-            </div>
-            <div class="row center-align">
-              {{ form.submit(class_="btn") }}
-
-              <a href="{{ url_for('dictionary') }}" class="btn">Reset</a>
-            </div>
-          </form>
-        </div>
-        <h2 class="dictionary-subheader">Dictionary!</h2>
-        <ul class="collapsible">
-          {%if dictionary%} {% for word in dictionary %}
-          <li>
-            <div class="collapsible-header">
-              <p>{{ word.word }}</p>
-            </div>
-            <div class="collapsible-body col s12">
-              <p><span>Definition: </span>{{ word.definition }}</p>
-              <p><span>Example: </span>{{ word.example }}</p>
-              <p><span>Added By: </span>{{ word.added_by }}</p>
-            </div>
-          </li>
-          {% if session.user == "admin" %}
-          <!-- Edit Button -->
-          <div class="profile-btn">
-            <a
-              href="{{ url_for('update_word', word_id=word._id) }}"
-              class="btn-small btn"
-              >Update</a
-            >
-            <a
-              href="{{ url_for('delete_word', word_id=word._id) }}"
-              class="btn-small btn"
-              >Delete</a
-            >
+              <div>
+                {{ form.submit(class_="btn") }}
+                <a href="{{ url_for('dictionary') }}" class="btn">Reset</a>
+              </div>
+            </form>
           </div>
-          {% endif %} {% endfor %} {%else%}
-          <h3 class="center-align none-found">No words found</h3>
-          {%endif%}
-        </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="dictionary-subheader text-shadow">Dictionary!</h2>
+            <ul class="collapsible">
+              {%if dictionary%} {% for word in dictionary %}
+              <li>
+                <div class="collapsible-header dictionary-words text-shadow">
+                  <p>{{ word.word }}</p>
+                </div>
+                <div class="collapsible-body text-shadow col s12">
+                  <p><span>Definition: </span>{{ word.definition }}</p>
+                  <p><span>Example: </span>{{ word.example }}</p>
+                  <p><span>Added By: </span>{{ word.added_by }}</p>
+                </div>
+              </li>
+              {% if session.user == "admin" %}
+              <!-- Update Button -->
+              <div class="profile-btn">
+                <a
+                  href="{{ url_for('update_word', word_id=word._id) }}"
+                  class="btn-small btn"
+                  >Update</a
+                >
+                <!-- Delete Button-->
+                <a
+                  href="{{ url_for('delete_word', word_id=word._id) }}"
+                  class="btn-small btn"
+                  >Delete</a
+                >
+              </div>
+              {% endif %} {% endfor %} {%else%}
+              <h3 class="center-align text-shadow error-message">
+                No words found
+              </h3>
+              {%endif%}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
