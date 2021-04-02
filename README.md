@@ -21,6 +21,41 @@ An online website on "Geordie" dialect which is a rather well known accent widel
     - [User](#user)
     - [Owner](#owner)
     - [Project Goals](#Goals-Derived-From-User-Stories)
+  - [Landing Page](#Landing-Page)
+  - [Geordie Dictionary](#Geordie-Dictionary)
+  - [Profile](#Profile)
+  - [Login and Signup](#Login-and-Signup )
+  - [Error Pages 403 404 500](#Error-Pages-403-404-500)
+  - [Strategy Plane](#Strategy-Plane)
+  - [Scope](#Scope)
+  - [Structure](#Structure)
+  - [Skeleton](#Skeleton)
+  - [Surface](#Surface)
+    - [Color Scheme](#Color-Scheme)
+    - [Font](#Font)
+    - [Images](#Images)
+- [Features](#Images)
+  - [Website Features](#Website-Features)
+  - [Features to be Implemented in the Future](#Features-to-be-Implemented-in-the-Future)
+- [Security](#Security)
+  - [Project Security](#Project-Security)
+- [Technologies](#Technologies)
+  - [Languages](#Languages)
+  - [Frameworks](#Frameworks)
+  - [Workspace](#Workspace)
+  - [External Resources](#External-Resources)
+  - [Dependencies](#Dependencies)
+- [Testing](#Testing)
+- [Project Barriers](#Project-Barriers)
+  - [Known Bugs](#Known-Bugs)
+- [Known Bugs](#Known-Bugs)
+  - [Prerequisites](#Prerequisites)
+  - [Cloning from GitHub](#Cloning-from-GitHub)
+  - [IDE](#IDE)
+  - [MongoDB](#MongoDB)
+  - [Heroku](#Heroku)
+- [Credits](#Credits)
+
 ---
 
 ## UX
@@ -106,7 +141,7 @@ Once the 'user' reaches their profile page they can create a word. When the 'use
 
 ---
 
-### Landing Page / Home
+### Landing Page
 
 The landing page actually was originally designed to contain a main image as the background with a clip path slicing the page but as i got into the development of the project i felt for this specific website and its functions it would be best kept minimal so that the soul focus of the website could be viewed and reached with ease and no distraction. The landing page consists of a simple navbar(sidenav for mobile) and a card used as a jumbotron which contains the heading an image of newcastle and two buttons allowing the user to sign up or login to the website to access the dictionary. At the bottom of the page will be a footer used to display socials for proofing but also provide a contact email for the users to submit any issues( I originally aimed for a contact page but felt that for this project a simple button displayed on the footer of each page allowing for email would be more suited)
 
@@ -124,13 +159,13 @@ The profile page will consist of a heading that lists the users username at the 
 
 ---
 
-### Login/Signup 
+### Login and Signup 
 
 The login page & sign up pages are very similar so will be listed as one, these pages consist of forms created with WTforms which allow the users to login or signup to the website on completion of the form
 
 ---
 
-### Error Pages 403, 404 & 500
+### Error Pages 403 404 500
 
 There will be 3 very basic error pages for this website in order to help the user if anything does go wrong.
 - 403: for any attempts access pages the user should not be able to (I actually have a login decorator that redirects users to a login page if they try hijack a url the 403 page is just there for future).
@@ -237,6 +272,8 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 ---
 
 ## Security
+
+### Project Security
 
 - URL hijacking security is handled by a [Login Decorator](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/). With this feature I am able to force users who are not logged in and try access a users page to be returned to the login screen.
 
