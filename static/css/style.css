@@ -61,6 +61,10 @@ nav {
   background-color: #cb997e;
 }
 
+.nav-links {
+  font-weight: 600;
+}
+
 .sidenav {
   background-color: #ffe8d6;
 }
