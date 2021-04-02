@@ -98,9 +98,5 @@ class UpdateWordForm(FlaskForm):
 
 
 class SearchForm(FlaskForm):
-    word = StringField("",
-                       validators=[
-                           DataRequired(),
-                           Regexp(regex_key,
-                                  message="Must not start or end with a space")])
+    word = StringField()
     submit = SubmitField("Search Word")

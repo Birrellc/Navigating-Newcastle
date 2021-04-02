@@ -177,8 +177,6 @@ def search():
         words = list(dict.find({"$text": {"$search": query}}))
         return render_template("dictionary.html", dictionary=words,
                                form=form, query=query)
-
-
 # Error Handlers
 
 
