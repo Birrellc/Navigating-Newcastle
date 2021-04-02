@@ -416,6 +416,7 @@ os.environ.setdefault("MONGO_DBNAME", "navigating_newcastle") #which is the data
 - [Markdown Colors](https://stackoverflow.com/questions/11509830/how-to-add-color-to-githubs-readme-md-file/41247934#41247934) - Thanks to this post i was able to add color to my Readme.md file.
 - [StackOverflow](https://stackoverflow.com/questions/22084886/add-a-css-class-to-a-field-in-wtform) - For help with adding classes to WTforms
 - [Flask Cheat Sheet](https://s3.us-east-2.amazonaws.com/prettyprinted/flask_cheatsheet.pdf) - I found this helpful when going through my project when i forgot how to correctly structure routes and other Flask elements
+- [Sandeep Sudhakaran - Youtube](https://www.youtube.com/watch?v=wQXSDwCgXIQ) - Used to get category flash messaging working.
 
 ### Media
 
