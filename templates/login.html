@@ -11,11 +11,11 @@
           messages %} {% for category, message in messages %} {% if category ==
           "logged_out" %}
           <div>
-            <h5>{{ message }}</h5>
+            <h5 class="success-message">{{ message }}</h5>
           </div>
           {% endif %} {% if category == "incorrect" %}
           <div>
-            <h5>{{ message }}</h5>
+            <h5 class="error-message">{{ message }}</h5>
           </div>
           {% endif %} {% endfor %} {% endif %} {% endwith %}
         </div>

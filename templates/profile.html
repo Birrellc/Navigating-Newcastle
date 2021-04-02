@@ -28,19 +28,19 @@
             if messages %} {% for category, message in messages %} {% if
             category == "word_added" %}
             <div>
-              <h5>{{ message }}</h5>
+              <h5 class="success-message">{{ message }}</h5>
             </div>
             {% endif %} {% if category == "updated_word" %}
             <div>
-              <h5>{{ message }}</h5>
+              <h5 class="success-message">{{ message }}</h5>
             </div>
             {% endif %} {% if category == "deleted_word" %}
             <div>
-              <h5>{{ message }}</h5>
+              <h5 class="error-message">{{ message }}</h5>
             </div>
             {% endif %} {% if category == "success" %}
             <div>
-              <h5>{{ message }}</h5>
+              <h5 class="success-message">{{ message }}</h5>
             </div>
             {% endif %} {% endfor %} {% endif %} {% endwith %}
           </div>

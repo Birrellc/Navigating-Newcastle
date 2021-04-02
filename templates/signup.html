@@ -12,7 +12,7 @@
             if messages %} {% for category, message in messages %} {% if
             category == "user_exists" %}
             <div>
-              <h5>{{ message }}</h5>
+              <h5 class="error-message">{{ message }}</h5>
             </div>
             {% endif %} {% endfor %} {% endif %} {% endwith %}
           </div>
