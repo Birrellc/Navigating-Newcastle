@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Regexp
 import re
 
-regex_key = re.compile("^[^\s].+[^\s]$")
+regex_key = re.compile("^[\\S].*")
 
 
 class RegistrationForm(FlaskForm):
@@ -47,7 +47,7 @@ class DictionaryForm(FlaskForm):
     word = StringField('Word:',
                        validators=[
                            DataRequired(),
-                           Length(min=2, max=15,
+                           Length(min=1, max=15,
                                   message="must be between 2-15 characters"),
                            Regexp(regex_key,
                                   message="Must not start or end with a space")])
@@ -57,7 +57,7 @@ class DictionaryForm(FlaskForm):
                                  DataRequired(),
                                  Regexp(regex_key,
                                         message="Must not start or end with a space"),
-                                 Length(min=2, max=25,
+                                 Length(min=1, max=25,
                                         message="must be between 2-25 characters")])
 
     example = StringField('Example:',
@@ -65,7 +65,7 @@ class DictionaryForm(FlaskForm):
                               DataRequired(),
                               Regexp(regex_key,
                                      message="Must not start or end with a space"),
-                              Length(min=2, max=50,
+                              Length(min=1, max=50,
                                      message="must be between 2-50 characters")])
 
     submit = SubmitField('Add Word')
