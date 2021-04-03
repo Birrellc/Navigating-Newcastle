@@ -263,7 +263,6 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 ### Features to be Implemented in the Future
 
 - Google reCAPTCHA.
-- Fully functioning checkout system to add to the shopping cart for successful online orders.
 - Upvote system for popular words.
 - a-z search order
 - Newsletter system with to send users which words have been added that month.
