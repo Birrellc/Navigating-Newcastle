@@ -88,7 +88,7 @@ The initial wireframes for this project [Wireframes](https://github.com/Birrellc
 
 The database used for this project is MongoDB via Atlas Cloud.
 
-The prcoess of this database for the 'user' to sign up to the website which will create a document in the User collection on MongoDB which contains their 'username' and a hashed version of their password for encryption. From their the website creates a 'user' key in session storage which is assigned to their username which then creates a unique profile page for that 'user'.
+The process of this database for the 'user' to sign up to the website which will create a document in the User collection on MongoDB which contains their 'username' and a hashed version of their password for encryption. From their the website creates a 'user' key in session storage which is assigned to their username which then creates a unique profile page for that 'user'.
 Once the 'user' reaches their profile page they can create a word. When the 'user' creates a word they will be asked to provide a word, definition and an example which will then be submitted to the dictionary collection in the database. To tie the 'user' to their created word their username will be attached to the word with the key added_by which will be available in the website dictionary for them and others to see but also gives the 'user' access to the specific words they create in order to edit and delete those words if they choose to.
 
 | Signup / Login     |
@@ -119,9 +119,9 @@ Once the 'user' reaches their profile page they can create a word. When the 'use
 - As a user i would like to be able to navigate through the website quickly and clearly.
 - As a user i would like to be able to see "Geordie Slang" terms & phrases.
 - As a user i would like to be able to contact the owner of the website with any issues or suggestions.
-- As a user i would like to be able to register and login seemlessly.
+- As a user i would like to be able to register and login seamlessly.
 - As a user i would like to be able to create, edit/update and delete my own "Geordie Slang" terms and phrases.
-- As a user i would like to be able to search the dictionary for specific words incase the dictionary grows to a large size so i can find a word faster.
+- As a user i would like to be able to search the dictionary for specific words in case the dictionary grows to a large size so i can find a word faster.
 
 
 #### Owner:
@@ -137,7 +137,7 @@ Once the 'user' reaches their profile page they can create a word. When the 'use
 
 - The Goal of this website/project is to create a brief resource on the "Geordie Dialect" of Newcastle.
 - The website will be aimed at people interested in the history or dialect of Newcastle and also people interested in visiting.
-- This website will also provide a community spirit theme by allowing vistors or residents or former residents to add their own "Geordie Words" to the dictionary.
+- This website will also provide a community spirit theme by allowing visitors or residents or former residents to add their own "Geordie Words" to the dictionary.
 
 ---
 
@@ -149,13 +149,13 @@ The landing page actually was originally designed to contain a main image as the
 
 ### Geordie Dictionary
 
-Inside the main section will be collapsible fields displaying 'Geordie Dialect' words and phrases which can then be opened up when clicked to show definition, an example and who added the word or phrase to the page. Also at the top of the dictionary page is a search bar for the users to search for words specificially incase the list gets too big for users to identify specific works with ease. (admin user can update and delete all words on the dictionary page by the use of 2 buttons below each word only the admin can see)
+Inside the main section will be collapsible fields displaying 'Geordie Dialect' words and phrases which can then be opened up when clicked to show definition, an example and who added the word or phrase to the page. Also at the top of the dictionary page is a search bar for the users to search for words specifically in case the list gets too big for users to identify specific works with ease. (admin user can update and delete all words on the dictionary page by the use of 2 buttons below each word only the admin can see)
 
 ---
 
 ### Profile
 
-The profile page will consist of a heading that lists the users username at the top and also a button to add their own word to the dictionary, below this will be a dictionary of all the words the user themselves have added to the website which will be accompanied by 2 buttons, 1 for updating words incase of typo's and also a button to delete the word completely from the database/website.
+The profile page will consist of a heading that lists the users username at the top and also a button to add their own word to the dictionary, below this will be a dictionary of all the words the user themselves have added to the website which will be accompanied by 2 buttons, 1 for updating words in case of typo's and also a button to delete the word completely from the database/website.
 
 ---
 
@@ -199,7 +199,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ### Structure
 
-- The website is designed with ease of navigation in mind for each section allowing quick transition throughout the website and to avoid any distractions from the users originial purpose on the website.
+- The website is designed with ease of navigation in mind for each section allowing quick transition throughout the website and to avoid any distractions from the users original purpose on the website.
 - The website will also share the same design plan across all pages to keep things neat and easy for the user to use.
 - Users without accounts or not logged in will only be able to see home, login and signup pages
 - Users that are logged in will also 
@@ -218,7 +218,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 #### Color Scheme
 
-- My color scheme came from the random color pannels generator on [Coolors](https://coolors.co/) later in the project i was unhappy with the original color scheme and chose to generate another random color scheme.
+- My color scheme came from the random color panels generator on [Coolors](https://coolors.co/) later in the project i was unhappy with the original color scheme and chose to generate another random color scheme.
 
 ![picture](static/images/nncolors.png)
 
@@ -276,7 +276,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 - URL hijacking security is handled by a [Login Decorator](https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/). With this feature I am able to force users who are not logged in and try access a users page to be returned to the login screen.
 
-- Form Validation from [WTForms](https://pypi.org/project/WTForms/) is also in place to help with basic form security by prevention of using an initial white space and also validating data correctly to help ensure the information submited is correct.
+- Form Validation from [WTForms](https://pypi.org/project/WTForms/) is also in place to help with basic form security by prevention of using an initial white space and also validating data correctly to help ensure the information submitted is correct.
 
 - Password Hashing is used when the user signs up to the website through [Werkzueg](https://pypi.org/project/Werkzeug/) where a user's password is encoded to a hashkey that also contains a random series of salt characters to add extra protection to the user's password.
 
@@ -314,7 +314,7 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Pexels](https://https://www.pexels.com/) - Stock image resource.
 - [Tinypng](http://https://tinypng.com/) - Website used to compress my images to allow for faster loading times.
 - [Font Awesome](https://fontawesome.com/) - Used to provide small icons for the website. eg. Testimonial quotes section.
-- [Stack Overflow](https://fonts.google.com/) - Resource which provided the 3 fonts: Anton, Arvo & Montserrat for the website.
+- [Stack Overflow](https://stackoverflow.com/) - Resource for solving problems.
 - [Responsivley App](https://responsively.app/) - Used to test responsive web apps.
 - [Real Favicon Generator](https://realfavicongenerator.net/) - Used to create my favicon image and also test to see if it was working.
 - [Spell Checker for Chrome](https://chrome.google.com/webstore/detail/spell-checker-for-chrome/jfpdnkkdgghlpdgldicfgnnnkhdfhocg?hl=en) - Used to spell check my **README.md** & **testing.md**.
@@ -323,7 +323,6 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Youtube](https://www.w3schools.com/) - Used as a general resource for help with code.
 - [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
 - [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
-- [BrowserStack](https://www.browserstack.com) - Used to test my website with the Safari browser.
 - [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) - Used throughout the website for help with all Flask Framework issues.
 - [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) - Used to help setup my forms for the website.
 - [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
@@ -349,7 +348,7 @@ Testing has is logged in its own document [HERE](https://github.com/Birrellc/Nav
 
 ## Project Barriers
 
-During this project I was met with a few barriers which i was able to breakdown and overcome with the help of documentation, Youtube videos, StackOverlow and Code Institute course material but the was one major area that i was not able to overcome as quickly as i liked which was the use of Flask-login which is why i switched to a Login Decorator security feature instead. Later after making my Login Decorator security i was able to get a grasp on how Flask-Login worked but chose to leave my Login Decorator security feature inplace instead while leaving the security to be adapted to Flask-Login and even more secure features at a later date when i revist this project in the future.
+During this project I was met with a few barriers which i was able to breakdown and overcome with the help of documentation, Youtube videos, StackOverlow and Code Institute course material but the was one major area that i was not able to overcome as quickly as i liked which was the use of Flask-login which is why i switched to a Login Decorator security feature instead. Later after making my Login Decorator security i was able to get a grasp on how Flask-Login worked but chose to leave my Login Decorator security feature in place instead while leaving the security to be adapted to Flask-Login and even more secure features at a later date when i revisit this project in the future.
 
 ### Known Bugs
 

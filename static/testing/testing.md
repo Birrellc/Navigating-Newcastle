@@ -61,7 +61,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ![picture](../testing/test-images/us-dictionary-test.gif)
 
-- The user will be able to see the words/terms on the website by first navigating to signup if they do not yet have an account, if they do then they must proceed to login.
+- The user will be able to see the words/terms on the website by first navigating to sign up if they do not yet have an account, if they do then they must proceed to login.
 - Next the user should go to the Navigation bar and click on Dictionary to be taken to the page where all words in the dictionary will be displayed in collapsible fields that the user can click on and see the definition of the word plus an example.
 
 ### User Story 3
@@ -76,7 +76,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ### User Story 4
 
-- **As a user i would like to be able to register and login seemlessly.**
+- **As a user i would like to be able to register and login seamlessly..**
 
 #### Sign Up
 
@@ -145,7 +145,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ### User Story 6
 
-- **As a user i would like to be able to search the dictionary for specific words incase the dictionary grows to a large size so i can find a word faster.**
+- **As a user i would like to be able to search the dictionary for specific words in case the dictionary grows to a large size so i can find a word faster.**
 
 ![picture](../testing/test-images/us-search-test.gif)
 
@@ -187,7 +187,7 @@ Validation testing for HTML, CSS, JS & Python:
 ### JavaScript
 
 - Due to my project being more focused on creating a CRUD application I found I did not need to use as much JavaScript for this process to chose to keep it to a minimum to allow more time to focus on the core concepts of the project.
-- For JavaScript validation I ran my code through [JsHint](https://jshint.com/) and recieved no errors or warnings as show in the image below.
+- For JavaScript validation I ran my code through [JsHint](https://jshint.com/) and received no errors or warnings as show in the image below.
 
 ![JS VALIDATION TEST](../testing/test-images/jshint-test-img.png)
 
@@ -196,7 +196,7 @@ Validation testing for HTML, CSS, JS & Python:
 ### Python
 
 - For Python testing I ran my code through [Extends Class Python Tester](https://extendsclass.com/python-tester.html).
-- I ran through all 3 of my .py files: app.py, forms.py and decorators.py of which i recieved no errors for any of them as show below.
+- I ran through all 3 of my .py files: app.py, forms.py and decorators.py of which i received no errors for any of them as show below.
 
 #### app.py
 
@@ -397,7 +397,7 @@ Typed 'test' in the word field, typed 'test definition' in the definition field,
 7. Example must be between 2-50 characters.
 8. Example must not start with Whitespace.
 9. Example Data is required.
-10. Words cannot be added if theyre already in the dictionary/database.
+10. Words cannot be added if they're already in the dictionary/database.
 
 - Validation Test
 
@@ -447,9 +447,9 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 8. Tried to update a 26 letter definition which failed with the correct error message.
 9. Tried to update a 1 letter example which failed with the correct error message.
 10. Tried to update a 51 letter example which failed with the correct error message.
-11. Tried to update a word starting with a whitespace which failed wit the correct message.
-12. Tried to update a definition starting with a whitespace which failed wit the correct message.
-13. Tried to update an example starting with a whitespace which failed wit the correct message.
+11. Tried to update a word starting with a whitespace which failed with the correct message.
+12. Tried to update a definition starting with a whitespace which failed with the correct message.
+13. Tried to update an example starting with a whitespace which failed with the correct message.
 
 
 - Validation Notes
@@ -487,5 +487,5 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 1. (admin)Clicked 'Update' button which loads the 'update_word' page correctly.
 2. (admin)Clicked 'Delete' button which deletes the word from the page as expected.
 3. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
-4. Typed 'test' (which was created earlier but will be removed before submission) to the search bar and hit search and the dictionary returned the word test as a collapisible with its definition, example and added by inside correctly.
+4. Typed 'test' (which was created earlier but will be removed before submission) to the search bar and hit search and the dictionary returned the word test as a collapsible with its definition, example and added by inside correctly.
 5. After displaying only 'test' i clicked the reset button which reloaded the page and displayed the rest of the dictionary again as expected.
