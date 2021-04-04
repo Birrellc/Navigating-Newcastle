@@ -489,3 +489,7 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 3. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
 4. Typed 'test' (which was created earlier but will be removed before submission) to the search bar and hit search and the dictionary returned the word test as a collapsible with its definition, example and added by inside correctly.
 5. After displaying only 'test' i clicked the reset button which reloaded the page and displayed the rest of the dictionary again as expected.
+
+- Search Bar Test:
+
+1. Tried to search an empty data field and received the message 'Please fill in this field'.
