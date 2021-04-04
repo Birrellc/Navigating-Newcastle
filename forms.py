@@ -98,5 +98,5 @@ class UpdateWordForm(FlaskForm):
 
 
 class SearchForm(FlaskForm):
-    word = StringField("")
+    word = StringField("", validators=[DataRequired()])
     submit = SubmitField("Search Word")
