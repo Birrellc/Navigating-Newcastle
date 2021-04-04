@@ -315,7 +315,6 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Tinypng](http://https://tinypng.com/) - Website used to compress my images to allow for faster loading times.
 - [Font Awesome](https://fontawesome.com/) - Used to provide small icons for the website. eg. Testimonial quotes section.
 - [Stack Overflow](https://fonts.google.com/) - Resource which provided the 3 fonts: Anton, Arvo & Montserrat for the website.
-- [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - Used to test the loading speed of the website.
 - [Responsivley App](https://responsively.app/) - Used to test responsive web apps.
 - [Real Favicon Generator](https://realfavicongenerator.net/) - Used to create my favicon image and also test to see if it was working.
 - [Spell Checker for Chrome](https://chrome.google.com/webstore/detail/spell-checker-for-chrome/jfpdnkkdgghlpdgldicfgnnnkhdfhocg?hl=en) - Used to spell check my **README.md** & **testing.md**.
@@ -325,7 +324,8 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 - [Balsamiq](https://balsamiq.com/wireframes/) - Used to create wireframes.
 - [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) - Used to create my **README.md** & **Testing.md** files.
 - [BrowserStack](https://www.browserstack.com) - Used to test my website with the Safari browser.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check accessabilty and SEO scores for the website.
+- [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/) - Used throughout the website for help with all Flask Framework issues.
+- [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) - Used to help setup my forms for the website.
 - [Code Institute](https://codeinstitute.net/) - Main source of coding knowledge and project was heavily based of their course material.
 - Code institute Slack Community - Used for inspiration for my website.
 
