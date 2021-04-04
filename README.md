@@ -222,17 +222,17 @@ The purpose of the website created is to be a modern focus on the well known 'Ge
 
 ![picture](static/images/nncolors.png)
 
-![#CB997E](https://via.placeholder.com/15/CB997E/CB997E) - Nav, Footer & Collapsible Header.
+![#CB997E](https://via.placeholder.com/15/CB997E/CB997E) - Nav, Footer & Collapsible Header Color.
 
 ![#DDBEA9](https://via.placeholder.com/15/DDBEA9/DDBEA9) - Card Color.
 
 ![#FFE8D6](https://via.placeholder.com/15/FFE8D6/FFE8D6) - Body Background & Sidenav Background Color.
 
-![#83C5BE](https://via.placeholder.com/15/83C5BE/83C5BE) - Button Color.
+![#4C736F](https://via.placeholder.com/15/4C736F/4C736F) - Button Color.
 
-![#B7B7A4](https://via.placeholder.com/15/B7B7A4/B7B7A4) - Collapsible Body Color.
+![#FFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF) - Collapsible Body background Color, Page and Footer Text Link Color, Heading and Button Text Color,.
 
-![#142424](https://via.placeholder.com/15/142424/142424) - Sidenav Links, Font Awesome Icons And Links For Signup And Login Text.
+![#142424](https://via.placeholder.com/15/142424/142424) - Nav Links, Brand Logo, Font Awesome Icons and Main Text Color.
 
 #### Font
 
