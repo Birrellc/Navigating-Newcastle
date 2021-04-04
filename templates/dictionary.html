@@ -2,9 +2,9 @@
 <div class="row">
   <div class="col s12">
     <div class="card center-align">
-      <div class="card-content white-text">
+      <div class="card-content">
         <h1 class="main-header text-shadow">Geordie Dictionary</h1>
-        <p class="dictionary-text text-shadow">
+        <p class="dictionary-text">
           Don't forget to add your own via your profile page!
         </p>
       </div>
@@ -59,14 +59,14 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <h2 class="dictionary-subheader text-shadow">Dictionary!</h2>
-            <ul class="text-shadow collapsible">
+            <h2 class="dictionary-subheader text-shadow">DICTIONARY!</h2>
+            <ul class="collapsible">
               {%if dictionary%} {% for word in dictionary %}
               <li>
-                <div class="collapsible-header dictionary-words text-shadow">
+                <div class="collapsible-header dictionary-words">
                   <p>{{ word.word }}</p>
                 </div>
-                <div class="collapsible-body text-shadow col s12">
+                <div class="collapsible-body col s12">
                   <p><span>Definition: </span>{{ word.definition }}</p>
                   <p><span>Example: </span>{{ word.example }}</p>
                   <p><span>Added By: </span>{{ word.added_by }}</p>

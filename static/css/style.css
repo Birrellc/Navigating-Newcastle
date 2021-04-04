@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   background-color: #ffe8d6;
   font-family: "Comic Neue", cursive;
-  color: white;
+  font-weight: 700 !important;
 }
 
 .text-shadow {
@@ -54,15 +54,15 @@ a {
 /* Nav */
 
 .brand-logo {
-  font-weight: 700;
+  color: #142424 !important;
 }
 
 nav {
   background-color: #cb997e;
 }
 
-.nav-links {
-  font-weight: 600;
+.nav-links a {
+  color: #142424;
 }
 
 .sidenav {
@@ -82,11 +82,12 @@ nav {
 /* BASE (sitewide) */
 
 .main-header {
-  font-weight: 700;
   font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-right: 2px;
+  font-weight: 700 !important;
+  color:#ffffff;
 }
 
 .card {
@@ -111,14 +112,14 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: #142424;
 }
 
 .collapsible-body {
-  background-color: #b7b7a4;
+  background-color: #ffffff;
   font-size: 1.2rem;
   overflow: auto;
-  color: #ffffff;
+  color: #142424;
 }
 
 .collapsible {
@@ -140,9 +141,8 @@ nav {
 }
 
 .btn {
-  background-color: #83c5be;
+  background-color: #4C736F;
   margin-bottom: 5px;
-  font-weight: 600;
 }
 
 .form-text {
@@ -168,19 +168,21 @@ nav {
 
 .mail {
   font-size: 1rem !important;
-  color: #f5eded;
-  font-weight: 600;
+  color: #ffffff;
 }
 
 i.fa-envelope {
   margin-right: 5px;
 }
 
+.copyright span {
+  color:#ffffff;
+}
+
 .copyright a {
   color: #142424;
   font-size: 1rem;
-  letter-spacing: 2px;
-  font-weight: 700;
+  letter-spacing: 1.2px;
 }
 
 /* Index.html */
@@ -194,12 +196,13 @@ i.fa-envelope {
   padding-top: 20px;
   font-size: 1.5rem;
   text-transform: capitalize;
-  font-weight: 600;
+  color: #142424;
 }
 
 .cta-text {
   font-size: 1.1rem;
   text-transform: capitalize;
+  color: #142424;
 }
 
 /* Dictionary.html */
@@ -207,16 +210,19 @@ i.fa-envelope {
 .dictionary-text {
   font-size: 1.3rem;
   text-transform: capitalize;
+  color: #142424;
 }
 
 .dictionary-subheader {
   font-size: 2.2rem;
-  font-weight: 600;
   padding-bottom: 20px;
+  color: #ffffff;
+  font-weight: 700 !important;
 }
 
 .search-form i {
   font-size: 1.7rem;
+  color: #142424;
 }
 
 /* profile.html */
@@ -227,6 +233,7 @@ i.fa-envelope {
 
 .profile-text {
   font-size: 1.5rem;
+  color: #142424;
 }
 
 .add-word-btn {
@@ -238,6 +245,7 @@ i.fa-envelope {
 .signup-link {
   padding-top: 15px;
   padding-bottom: 15px;
+  color:#ffffff;
 }
 
 /* signup page */
@@ -245,6 +253,7 @@ i.fa-envelope {
 .login-link {
   padding-top: 15px;
   padding-bottom: 15px;
+  color:#ffffff;
 }
 
 /* Media Queries */
