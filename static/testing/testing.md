@@ -244,6 +244,17 @@ Full list of tested resolutions with [DevTools](https://developer.chrome.com/doc
 
 ## Speed Testing
 
+For this project i used [GT Metrix](https://gtmetrix.com/) for my speed testing of which the project gained an overall score of A - 90%:
+
+#### Results
+
+![GT Metrix](../testing/test-images/nn-speed-test.png)
+
+#### Improvements
+
+![GT Metrix](../testing/test-images/nn-speed-improvements.png)
+
+
 ## Manual Testing
 
 Throughout this project i tested things manually via a preview environment and also on the live heroku hosted website due to having deployed early in the process.
