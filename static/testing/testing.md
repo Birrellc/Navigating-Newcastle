@@ -1,4 +1,4 @@
-# TESTING
+# Testing
 
 This project has been tested throughout with the use of preview, DevTools, manual testing and also the website was deployed on Heroku pages very early in development with an automatic deploy feature enabled for every commit made which allowed me to test live deployments very early in the development cycle.
 
@@ -32,7 +32,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
 
 ---
 
-## USER STORY TESTING
+## User Story Testing
 
 ### User Story 1
 
@@ -242,6 +242,8 @@ Full list of tested resolutions with [DevTools](https://developer.chrome.com/doc
 
 ---
 
+## Speed Testing
+
 ## Manual Testing
 
 Throughout this project i tested things manually via a preview environment and also on the live heroku hosted website due to having deployed early in the process.
@@ -249,7 +251,7 @@ Throughout this project i tested things manually via a preview environment and a
 All testing below is done on both the deployed live website and also the live preview.
 
 
-### NAV
+### Nav
 
 - Main
 
@@ -272,7 +274,7 @@ All testing below is done on both the deployed live website and also the live pr
 - While testing these features in mobile view i found that the link area's around the actual links would sometimes open the wrong link when clicked i fixed this by switching my display to flex and removing the padding-top style i was using on the elements which can be found in the commit [HERE](https://github.com/Birrellc/Navigating-Newcastle/commit/0221fde9590b9fde4068ee67917e6caf43451cb5)
 
 
-### FOOTER
+### Footer
 
 - Socials
 
@@ -291,13 +293,13 @@ All testing below is done on both the deployed live website and also the live pr
 2. Clicked my 'name' which successfully loaded my GitHub profile page.
 
 
-### HOME (index.html)
+### Home (index.html)
 
 1. Clicked 'Login' Button which successfully opened the Login Page.
 2. Clicked 'Sign Up' Button which successfully opened the Sign Up Page.
 
 
-### SIGN UP (signup.html)
+### Sign Up (signup.html)
 
 - Basic Sign Up Functionality:
 
@@ -336,7 +338,7 @@ Tests 8 & 9 failed originally but i corrected the code and then retested and the
 1. Clicked the link at the end of 'Already have an account? Login' and was successfully redirected to the Login Page.
 
 
-### LOGIN (login.html)
+### Login (login.html)
 
 - Basic Login Functionality:
 
@@ -366,7 +368,7 @@ Entered 'Test05' as username and 'password' as password then clicked Login butto
 1. Clicked the link at the end of 'Dont have an account? Sign Up' and was successfully redirected to the Sign Up Page.
 
 
-### ADD WORD (add_word.html)
+### Add Word (add_word.html)
 
 - Base Add Word Functionality Test:
 
@@ -404,7 +406,7 @@ Typed 'test' in the word field, typed 'test definition' in the definition field,
 
 
 
-### UPDATE WORD (update_word.html)
+### Update Word (update_word.html)
 
 - Base Update Word Functionality Test:
 
@@ -444,7 +446,7 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 **_ BUG FOUND _** - while doing my tests for update_word.html I found that if I update my own word for example 'test' to 'test1' test will be replaced and no longer exist but if another user created test1 before i updated test to test1 there would then be 2 test1's in the dictionary.
 
 
-### PROFILE (profile.html)
+### Profile (profile.html)
 
 - Visability:
 
@@ -460,7 +462,7 @@ Using steps 1 & 2 and clicking the update button I was able to update the defini
 4. Clicked on the dictionary word and the collapsible drops down displaying definition example and added by as expected.
 
 
-### DICTIONARY (dictionary.html)
+### Dicitonary (dictionary.html)
 
 - Visability:
 
