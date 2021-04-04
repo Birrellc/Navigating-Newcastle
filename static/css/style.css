@@ -39,7 +39,7 @@ body {
 }
 
 a {
-  color: #142424;
+  color: #ffffff;
 }
 
 .page-container {
@@ -252,7 +252,7 @@ i.fa-envelope {
 .signup-link {
   padding-top: 15px;
   padding-bottom: 15px;
-  color: #ffffff;
+  color: #142424;
 }
 
 /* signup page */
@@ -260,7 +260,7 @@ i.fa-envelope {
 .login-link {
   padding-top: 15px;
   padding-bottom: 15px;
-  color: #ffffff;
+  color: #142424;
 }
 
 /* Media Queries */
