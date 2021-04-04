@@ -19,6 +19,7 @@ This project has been tested throughout with the use of preview, DevTools, manua
   - [JS](#JavaScript)
   - [Python](#Python)
 - [Responsive Testing](#Responsive-Testing)
+- [Speed Testing](#Speed-Testing)
 - [Manual Testing](#Manual-Testing)
   - [Nav](#NAV)
   - [Footer](#NAV)
