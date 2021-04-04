@@ -79,11 +79,11 @@ nav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 /* BASE (sitewide) */
@@ -94,7 +94,7 @@ nav {
   letter-spacing: 2px;
   margin-right: 2px;
   font-weight: 700 !important;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .card {
@@ -148,7 +148,7 @@ nav {
 }
 
 .btn {
-  background-color: #4C736F;
+  background-color: #4c736f;
   margin-bottom: 5px;
 }
 
@@ -183,7 +183,7 @@ i.fa-envelope {
 }
 
 .copyright span {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .copyright a {
@@ -252,7 +252,7 @@ i.fa-envelope {
 .signup-link {
   padding-top: 15px;
   padding-bottom: 15px;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /* signup page */
@@ -260,7 +260,7 @@ i.fa-envelope {
 .login-link {
   padding-top: 15px;
   padding-bottom: 15px;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /* Media Queries */
