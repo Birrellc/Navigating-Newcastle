@@ -31,14 +31,14 @@ class LoginForm(FlaskForm):
                                Length(min=3, max=12,
                                       message="Please enter a username between 3 and 12 characters long"),
                                Regexp(regex_key,
-                                      message="Username not start or end with a space")])
+                                      message="Username not start with a space")])
 
     password = PasswordField('Password:', validators=[
         DataRequired(),
         Length(min=8,
                message="Password must be atleast 8 letters long"),
         Regexp(regex_key,
-               message="Password not start or end with a space")])
+               message="Password not start with a space")])
 
     submit = SubmitField('Login')
 
@@ -50,13 +50,13 @@ class DictionaryForm(FlaskForm):
                            Length(min=2, max=15,
                                   message="must be between 2-15 characters"),
                            Regexp(regex_key,
-                                  message="Must not start or end with a space")])
+                                  message="Must not start with a space")])
 
     definition = StringField('Definition:',
                              validators=[
                                  DataRequired(),
                                  Regexp(regex_key,
-                                        message="Must not start or end with a space"),
+                                        message="Must not start with a space"),
                                  Length(min=2, max=25,
                                         message="must be between 2-25 characters")])
 
@@ -64,7 +64,7 @@ class DictionaryForm(FlaskForm):
                           validators=[
                               DataRequired(),
                               Regexp(regex_key,
-                                     message="Must not start or end with a space"),
+                                     message="Must not start with a space"),
                               Length(min=2, max=50,
                                      message="must be between 2-50 characters")])
 
@@ -76,13 +76,13 @@ class UpdateWordForm(FlaskForm):
                        validators=[
                            DataRequired(),
                            Regexp(regex_key,
-                                  message="Must not start or end with a space")])
+                                  message="Must not start with a space")])
 
     definition = StringField('Definition:',
                              validators=[
                                  DataRequired(),
                                  Regexp(regex_key,
-                                        message="Must not start or end with a space"),
+                                        message="Must not start with a space"),
                                  Length(min=2, max=25,
                                         message="must be between 2-25 characters")])
 
@@ -90,7 +90,7 @@ class UpdateWordForm(FlaskForm):
                           validators=[
                               DataRequired(),
                               Regexp(regex_key,
-                                     message="Must not start or end with a space"),
+                                     message="Must not start with a space"),
                               Length(min=2, max=50,
                                      message="must be between 2-50 characters")])
 
